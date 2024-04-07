@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation';
 import { useState, useEffect, Suspense } from 'react';
 
-export default function Result() {
+function Result() {
   const [data, setData] = useState(null);
   const [query, setQuery] = useState('');
   const [params] = useSearchParams();
@@ -15,6 +15,11 @@ export default function Result() {
     }
   }, [anime]);
   return (
-    <div><Suspense>{query}</Suspense></div>
+    <>{query}</>
+  )
+}
+export default function Res() {
+  return (
+    <div><Suspense fallback="loading"><Result /></Suspense></div>
   )
 }
