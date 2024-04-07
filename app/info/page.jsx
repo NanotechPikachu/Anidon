@@ -5,7 +5,7 @@ import { useState, useEffect, Suspense } from 'react';
 import { get } from '../functions/gogo.js';
 
 function Result() {
-  const [data, setData] = useState({ results: [] });
+  const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
   const params = useSearchParams();
   const id = params.get('id');
@@ -28,7 +28,7 @@ function Result() {
     <div className="mt-20">
     <h1 className="text-2xl text-center font-bold">Search results...</h1>
     </div>
-{m}
+{JSON.stringify(m)}
 {/*
     <div className="mt-6 grid grid-flow-row grid-cols-3 overflow-hidden gap-4"> 
     {loading ? (
