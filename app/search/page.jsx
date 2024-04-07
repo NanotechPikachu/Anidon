@@ -1,18 +1,19 @@
 "use client"
 
-import { useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
 
 export default function Result() {
   const [data, setData] = useState(null);
   const [query, setQuery] = useState('');
-  const router = useRouter();
+  const [params] = useSearchParams();
+  const query = params.get('anime');
 
   useEffect(() => {
-    if (router.query.anime) {
-      setQuery(router.query.anime)
+    if (query) {
+      setQuery(query)
     }
-  }, [router.query]);
+  }, [query]);
   return (
     <div>{query}</div>
   )
