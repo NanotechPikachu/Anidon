@@ -36,7 +36,7 @@ function Result() {
     <div className="mt-4 flex items-center justify-center h-24 w-20">
     <img src={m.image} alt="Anime pic" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
     </div>
-    <div className="overflow-hidden flex">
+    <div className="w-full">
     <h2 className="text-lg">Description</h2>
     <br />
     <p className="text-base">{m.description}</p>
