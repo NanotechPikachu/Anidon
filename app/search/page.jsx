@@ -13,9 +13,9 @@ function Result() {
   useEffect(() => {
     if (anime) {
       setQuery(anime)
-      const ans = search(query).then((ans) => {
+      const ans = search(anime).then((ans) => {
       setData(ans?.results)
-      console.log(ans)
+      console.log(query, ans)
     });
     }
   }, [anime]);
