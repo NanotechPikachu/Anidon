@@ -11,7 +11,7 @@ function Result() {
   const id = params.get('id');
 
   useEffect(() => {
-    if (anime) {
+    if (id) {
       setLoading(true);
       get(id).then((ans) => {
         console.log(ans);
@@ -19,7 +19,7 @@ function Result() {
         setLoading(false);
       });
     }
-  }, [anime]);
+  }, [id]);
 
   const m = data;
   return (
