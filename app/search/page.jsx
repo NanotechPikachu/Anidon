@@ -13,9 +13,11 @@ function Result() {
     if (anime) {
       const ans = search(anime).then((ans) => {
       setData(ans?.results)
+      console.log(ans)
     });
     }
   }, [anime]);
+  console.log(data)
 
   return (
     <>
