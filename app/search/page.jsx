@@ -18,7 +18,7 @@ function Result() {
     });
     }
   }, [anime]);
-  console.log(data)
+  console.log(data, "-")
 
   return (
     <>
