@@ -9,8 +9,8 @@ export default function Result() {
   const router = useRouter();
 
   useEffect(() => {
-    if (router.query.search) {
-      setQuery(router.query.search)
+    if (router.query.anime) {
+      setQuery(router.query.anime)
     }
   }, [router.query]);
   return (
