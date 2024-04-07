@@ -26,7 +26,7 @@ function Result() {
   return (
     <>
     <div className="ml-6 mr-6">
-    <div className="mt-18">
+    <div className="mt-20">
     <h1 className="text-xl text-center font-bold">Search results...</h1>
     <p className="text-center font-mono text-base"><i>Query: {anime}</i></p>
     </div>
@@ -49,7 +49,7 @@ function Result() {
 
 export default function Res() {
   return (
-    <Suspense fallback={<div className="w-full min-h-screen items-center justify-center text-center"><p>Loading...</p></div>}>
+    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>Loading...</p></div>}>
       <Result />
     </Suspense>
   );
