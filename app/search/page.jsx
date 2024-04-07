@@ -1,39 +1,38 @@
 "use client"
 
 import { useSearchParams } from 'next/navigation';
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect } from 'react';
 import { search } from '../functions/gogo.js';
 
 function Result() {
-  const [data, setData] = useState('Waiting...');
+  const [data, setData] = useState({ results: [] }); // Initialize data as an object with a results array
   const params = useSearchParams();
   const anime = params.get('anime');
 
   useEffect(() => {
     if (anime) {
-      const ans = search(anime).then((ans) => {
-      console.log(ans)
-      setData(ans)
-      console.log(ans)
-    });
+      search(anime).then((ans) => {
+        console.log(ans);
+        setData(ans); // Update the state with the new data
+      });
     }
-  }, [anime]);
-  console.log(data, "-")
+  }, [anime]); // Dependency array should contain only the variables that trigger re-runs
 
   return (
-    <>
     <div className="mt-10 mr-6 ml-6">
-    {data.results?.map((x, index) => {
-    <div className="border-2"><span className="text-base">Anime: {x.title}</span>
+      {data.results.map((x, index) => ( // Use parentheses to return JSX
+        <div key={index} className="border-2"> {/* Add a key prop to each child in a list */}
+          <span className="text-base">Anime: {x.title}</span>
+        </div>
+      ))}
     </div>
-    })
-    }
-    </div>
-    </>
-  )
+  );
 }
+
 export default function Res() {
   return (
-    <div><Suspense fallback="loading"><Result /></Suspense></div>
-  )
+    <Suspense fallback={<div>Loading...</div>}> {/* Use JSX for the fallback */}
+      <Result />
+    </Suspense>
+  );
 }
