@@ -7,13 +7,13 @@ export default function Result() {
   const [data, setData] = useState(null);
   const [query, setQuery] = useState('');
   const [params] = useSearchParams();
-  const query = params.get('anime');
+  const anime = params.get('anime');
 
   useEffect(() => {
-    if (query) {
-      setQuery(query)
+    if (anime) {
+      setQuery(anime)
     }
-  }, [query]);
+  }, [anime]);
   return (
     <div>{query}</div>
   )
