@@ -1,8 +1,9 @@
+"use client"
+
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
 export default function Home() {
-  "use client"
   const [searchTerm, setSearchTerm] = useState('');
   const router = useRouter();
   return (
