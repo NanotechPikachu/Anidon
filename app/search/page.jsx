@@ -13,25 +13,26 @@ function Result() {
     if (anime) {
       search(anime).then((ans) => {
         console.log(ans);
-        setData(ans); // Update the state with the new data
+        setData(ans);
       });
     }
-  }, [anime]); // Dependency array should contain only the variables that trigger re-runs
+  }, [anime]);
 
+  const m = data.results; console.log(m)
   return (
     <div className="mt-10 mr-6 ml-6">
-      {data.results.map((x, index) => ( // Use parentheses to return JSX
-        <div key={index} className="border-2"> {/* Add a key prop to each child in a list */}
-          <span className="text-base">Anime: {x.title}</span>
-        </div>
-      ))}
+    {data.results.map((x, index) => ( 
+    <div key={index} className="border-2"> 
+    <span className="text-base">Anime: {x.title}</span>
+     </div>
+    ))}
     </div>
   );
 }
 
 export default function Res() {
   return (
-    <Suspense fallback={<div>Loading...</div>}> {/* Use JSX for the fallback */}
+    <Suspense fallback={<div>Loading...</div>}>
       <Result />
     </Suspense>
   );
