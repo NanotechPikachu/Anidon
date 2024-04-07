@@ -12,20 +12,20 @@ function Result() {
   useEffect(() => {
     if (anime) {
       search(anime).then((ans) => {
-        //console.log(ans);
+        console.log(ans);
         setData(ans);
       });
     }
   }, [anime]);
 
-  const m = data.results; console.log(m)
+  const m = data.results;
   return (
     <div className="mt-10 mr-6 ml-6">
-    {m?.map((x, index) => ( 
+    {m.length > 0 ? (m?.map((x, index) => ( 
     <div key={index} className="border-2"> 
     <span className="text-base">Anime: {x.title}</span>
      </div>
-    ))}
+    ))) : (<p>No results</p>)}
     </div>
   );
 }
