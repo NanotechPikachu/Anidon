@@ -9,7 +9,7 @@ export default function Home() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    router.push(`search?query=${encodeURIComponent(searchTerm)}`);
+    router.push(`search?search=${encodeURIComponent(searchTerm)}`);
   };
   
   return (
