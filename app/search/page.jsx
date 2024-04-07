@@ -2,8 +2,9 @@
 
 import { useSearchParams } from 'next/navigation';
 import { useState, useEffect, Suspense } from 'react';
+import { search } from '../functions/gogo.js';
 
-function Result() {
+async function Result() {
   const [data, setData] = useState(null);
   const [query, setQuery] = useState('');
   const params = useSearchParams();
@@ -12,10 +13,13 @@ function Result() {
   useEffect(() => {
     if (anime) {
       setQuery(anime)
+      const ans = await search(query);
+      setData(ans);
     }
   }, [anime]);
+
   return (
-    <>{query}</>
+    <>{JSON.stringify(data)}</>
   )
 }
 export default function Res() {
