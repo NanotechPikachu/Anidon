@@ -9,7 +9,7 @@ export default function Home() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    router.push(`search?search=${encodeURIComponent(searchTerm)}`);
+    router.push(`search?anime=${encodeURIComponent(searchTerm)}`);
   };
   
   return (
