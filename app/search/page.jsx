@@ -15,6 +15,7 @@ function Result() {
       setQuery(anime)
       const ans = search(query).then((ans) => {
       setData(ans?.results)
+      console.log(ans)
     });
     }
   }, [anime]);
@@ -22,7 +23,7 @@ function Result() {
   return (
     <>
     <div className="mt-10 mr-6 ml-6">
-    <h1 className="font-bold">{data}
+    <h1 className="font-bold">{JSON.stringify(data)}
     </h1>
     </div>
     </>
