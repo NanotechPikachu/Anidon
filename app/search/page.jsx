@@ -1,7 +1,7 @@
 "use client"
 
 import { useSearchParams } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 
 export default function Result() {
   const [data, setData] = useState(null);
@@ -15,6 +15,6 @@ export default function Result() {
     }
   }, [anime]);
   return (
-    <div>{query}</div>
+    <div><Suspense>{query}</Suspense></div>
   )
 }
