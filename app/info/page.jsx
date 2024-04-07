@@ -33,7 +33,7 @@ function Result() {
         <p>Loading...</p>
       ) : m ? (
     <div>
-    <div className="mt-4 flex items-center w-full">
+    <div className="mt-4 flex justify-center items-center w-full">
     <div className="h-24 w-20">
     <img src={m.image} alt="Anime pic" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
     </div>
