@@ -12,7 +12,8 @@ function Result() {
   useEffect(() => {
     if (anime) {
       const ans = search(anime).then((ans) => {
-      setData(ans?.results)
+      console.log(ans)
+      setData(ans)
       console.log(ans)
     });
     }
@@ -22,7 +23,7 @@ function Result() {
   return (
     <>
     <div className="mt-10 mr-6 ml-6">
-    {data.map((x, index) => {
+    {data.results?.map((x, index) => {
     <div className="border-2"><span className="text-base">Anime: {x.title}</span>
     </div>
     })
