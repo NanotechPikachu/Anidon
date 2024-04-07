@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@consumet/extensions": "github:consumet/consumet.ts",
     "react": "^18",
     "react-dom": "^18",
     "next": "14.1.4"
