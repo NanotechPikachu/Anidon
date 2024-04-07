@@ -27,8 +27,8 @@ function Result() {
     <>
     <div className="ml-6 mr-6">
     <div className="mt-20">
-    <h1 className="text-xl text-center font-bold">Search results...</h1>
-    <p className="text-center font-mono text-base"><i>Query: {anime}</i></p>
+    <h1 className="text-2xl text-center font-bold">Search results...</h1>
+    <p className="text-center font-mono text-sm"><i>Query: {anime}</i></p>
     </div>
     <div className="mt-6 grid grid-flow-row grid-cols-3 overflow-hidden gap-4"> 
     {loading ? (
