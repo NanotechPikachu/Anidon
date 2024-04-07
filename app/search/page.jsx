@@ -28,6 +28,7 @@ function Result() {
     <div className="ml-6 mr-6">
     <div className="mt-18">
     <h1 className="text-xl text-center font-bold">Search results...</h1>
+    <p className="text-center font-mono text-base"><i>Query: {anime}</i></p>
     </div>
     <div className="mt-6 grid grid-flow-row grid-cols-3 overflow-hidden gap-4"> 
     {loading ? (
@@ -37,7 +38,7 @@ function Result() {
     <div>
     <img src={x.image} alt="Anime pic" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
     </div>
-    <p className="text-base">Anime: {x.title}</p>
+    <p className="ml-1 mr-1 text-base">Anime: {x.title}</p>
      </div>
     ))) : (<p>No results</p>)}
     </div>
@@ -48,7 +49,7 @@ function Result() {
 
 export default function Res() {
   return (
-    <Suspense fallback={<div className="w-full min-h-screen items-center justify-center"><p>Loading...</p></div>}>
+    <Suspense fallback={<div className="w-full min-h-screen items-center justify-center text-center"><p>Loading...</p></div>}>
       <Result />
     </Suspense>
   );
