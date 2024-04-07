@@ -46,7 +46,7 @@ function Result() {
 
 export default function Res() {
   return (
-    <Suspense fallback={<div className="w-full min-h-screen items-center justify-center><p>Loading...</p></div>}>
+    <Suspense fallback={<div className="w-full min-h-screen items-center justify-center"><p>Loading...</p></div>}>
       <Result />
     </Suspense>
   );
