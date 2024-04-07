@@ -33,8 +33,10 @@ function Result() {
     {loading ? (
         <p>Loading...</p>
       ) : m.length > 0 ? (m?.map((x, index) => ( 
-    <div key={index} className="border-2 border-teal-100 overflow-hidden h-20 flex flex-col relative">
+    <div key={index} className="border-2 border-teal-100 overflow-hidden h-26 flex flex-col relative">
+    <div>
     <img src={x.image} alt="Anime pic" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
+    </div>
     <p className="text-base">Anime: {x.title}</p>
      </div>
     ))) : (<p>No results</p>)}
