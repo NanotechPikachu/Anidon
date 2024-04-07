@@ -1,7 +1,7 @@
 "use client"
 
 import { useSearchParams } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { search } from '../functions/gogo.js';
 
 function Result() {
