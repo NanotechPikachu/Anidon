@@ -6,7 +6,7 @@ import { search } from '../functions/gogo.js';
 
 function Result() {
   const [data, setData] = useState(null);
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState('Waiting...');
   const params = useSearchParams();
   const anime = params.get('anime');
 
