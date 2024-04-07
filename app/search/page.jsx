@@ -5,8 +5,8 @@ import { useState, useEffect, Suspense } from 'react';
 import { search } from '../functions/gogo.js';
 
 function Result() {
-  const [data, setData] = useState(null);
-  const [query, setQuery] = useState('Waiting...');
+  const [data, setData] = useState('Waiting...');
+  const [query, setQuery] = useState('');
   const params = useSearchParams();
   const anime = params.get('anime');
 
