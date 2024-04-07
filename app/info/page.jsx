@@ -28,7 +28,7 @@ function Result() {
     <div className="mt-20">
     <h1 className="text-2xl text-center font-bold">{m.title}</h1>
     </div>
-    <div className="mt-6 grid grid-flow-row grid-cols-3 overflow-hidden gap-4"> 
+    <div className="mt-6"> 
     {loading ? (
         <p>Loading...</p>
       ) : m ? (
@@ -37,7 +37,7 @@ function Result() {
     <img src={m.image} alt="Anime pic" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
     </div>
     <div className="w-full">
-    <h2 className="text-lg">Description</h2>
+    <h2 className="text-lg mt-4">Description</h2>
     <br />
     <p className="text-base">{m.description}</p>
     </div>
