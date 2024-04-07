@@ -26,23 +26,21 @@ function Result() {
     <>
     <div className="ml-6 mr-6">
     <div className="mt-20">
-    <h1 className="text-2xl text-center font-bold">Search results...</h1>
+    <h1 className="text-2xl text-center font-bold">{m.title}</h1>
     </div>
-{JSON.stringify(m)}
-{/*
     <div className="mt-6 grid grid-flow-row grid-cols-3 overflow-hidden gap-4"> 
     {loading ? (
         <p>Loading...</p>
-      ) : m.length > 0 ? (m?.map((x, index) => ( 
-    <div key={index} className="border-2 border-teal-100 overflow-hidden h-26 flex flex-col relative">
-    <div>
-    <img src={x.image} alt="Anime pic" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
+      ) : m ? (
+    <div className="mt-4 flex items-center justify-center h-12 w-8">
+    <img src={m.image} alt="Anime pic" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
     </div>
-    <p className="ml-1 mr-1 text-base">Anime: {x.title}</p>
-     </div>
-    ))) : (<p>No results</p>)}
+    <div className="overflow-hidden flex">
+    <h2 className="text-lg">Description</h2>
+    <p className="text-base">{m.description}</p>
     </div>
-*/}
+    ) : (<p>No results</p>)}
+    </div>
     </div>
     </>
   );
