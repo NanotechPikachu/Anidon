@@ -6,7 +6,7 @@ import { useState, useEffect, Suspense } from 'react';
 function Result() {
   const [data, setData] = useState(null);
   const [query, setQuery] = useState('');
-  const [params] = useSearchParams();
+  const params = useSearchParams();
   const anime = params.get('anime');
 
   useEffect(() => {
