@@ -4,7 +4,17 @@ import { download } from '../functions/gogo.js';
 async function Download({ searchParams }) {
   const params = searchParams;
   console.log(params);
-  const link = params?.link || 'a';
+  const link = params?.link;
+
+  if (!link) {
+    console.error('No link provided in searchParams');
+    return (
+      <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center">
+      <p>Invalid Anime!</p>
+      </div>
+    );
+  };
+
   let data = await download(link);
   let m = data || false;
   console.log(m)
