@@ -29,4 +29,4 @@ async function stream(id) {
   return result;
 };
 
-export { search, get, download }
+export { search, get, download, stream }
