@@ -21,7 +21,11 @@ async function download(id) {
   } else {
     result = false;
   };
-  console.log(d, res, result)
+  return result;
+};
+
+async function stream(id) {
+  const result = await gogoanime.fetchEpisodeSources(id);
   return result;
 };
 
