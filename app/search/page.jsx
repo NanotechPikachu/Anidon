@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 
 function Result() {
   const [data, setData] = useState({ results: [] });
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const params = useSearchParams();
   const anime = params.get('anime');
   const router = useRouter();
@@ -18,12 +18,13 @@ function Result() {
 
   useEffect(() => {
     if (anime) {
-      setLoading(true);
       search(anime).then((ans) => {
         console.log(ans);
         setData(ans);
         setLoading(false);
       });
+    } else {
+      setLoading(false);
     }
   }, [anime]);
 
@@ -37,7 +38,7 @@ function Result() {
     </div>
     <div className="mt-6 grid grid-flow-row grid-cols-3 overflow-hidden gap-4"> 
     {loading ? (
-        <p>Loading...</p>
+    <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>Loading...</p></div>
       ) : m.length > 0 ? (m?.map((x, index) => ( 
     <div key={index} className="border-2 border-teal-100 overflow-hidden h-26 flex flex-col relative" onClick={() => changePage(x.id)}>
     <div>
@@ -45,7 +46,7 @@ function Result() {
     </div>
     <p className="ml-1 mr-1 text-base">{x.title}</p>
      </div>
-    ))) : (<p>No results</p>)}
+    ))) : (<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>No results</p></div>)}
     </div>
     </div>
     </>
