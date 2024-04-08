@@ -21,7 +21,7 @@ function Result() {
       setLoading(false);
     }
   }, [id]);
-  console.log(!data.title);
+ // console.log(!data.title);
   const m = data;
   const a = m.episodes?.map((i) => (`Episode: ${i.number}`))?.join(", ")
 console.log(a)
@@ -30,7 +30,7 @@ console.log(a)
     <div className="ml-6 mr-6 mt-6">
     {loading ? (
         <p>Loading...</p>
-      ) : m ? (
+      ) : m.title ? (
     <div>
     <div className="mt-20">
     <h1 className="text-2xl text-center font-bold">{`${m.title?.replace('(Dub)', '')} (${m.subOrDub})`}</h1>
