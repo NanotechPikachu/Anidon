@@ -39,7 +39,7 @@ async function Download({ searchParams }) {
     <div>{/*`${JSON.stringify(m)} | ${JSON.stringify(y)} | ${anime}`*/}
     <div className="mt-20">
     <h1 className="text-2xl text-center font-bold">{anime}</h1>
-    <p className="font-mono text-sm text-center'>{episode}</p>
+    <p className="font-mono text-sm text-center">{`Episode: ${episode}`}</p>
     </div>
 {/*
     <div className="mt-4 flex justify-center items-center w-full">
