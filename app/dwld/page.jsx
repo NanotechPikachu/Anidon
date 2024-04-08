@@ -36,15 +36,13 @@ async function Download({ searchParams }) {
     <>
     <div className="ml-6 mr-6 mt-6 mb-20">
     {m ? (
-    <div>{/*`${JSON.stringify(m)} | ${JSON.stringify(y)} | ${anime}`*/}
+    <div>{`${JSON.stringify(m)} | ${JSON.stringify(y)}`}
     <div className="mt-20">
     <h1 className="text-2xl text-center font-bold">{anime}</h1>
     <p className="font-mono mt-3 text-sm text-center">{`Episode: ${episode}`}</p>
     </div>
 {/*
-    <div className="mt-4 flex justify-center items-center w-full">
     <div className="w-full">
-    </div>
     </div>
 */}
     </div>
