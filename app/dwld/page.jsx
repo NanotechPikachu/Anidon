@@ -16,7 +16,17 @@ async function Download({ searchParams }) {
   };
 
   let data = await download(link);
-  let m = data || false;
+  let m = data;
+
+  if (!m) {
+    console.error('Anime not found!');
+    return (
+      <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center">
+      <p>Anime Not Found!</p>
+      </div>
+    );
+  };
+
   console.log(m)
   return (
     <>
