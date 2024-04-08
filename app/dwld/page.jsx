@@ -43,24 +43,8 @@ async function Download({ searchParams }) {
     </div>
 {/*
     <div className="mt-4 flex justify-center items-center w-full">
-    <div className="h-48 w-44">
-    <img src={m.image} alt="Anime pic" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
-    </div>
-    </div>
-    <br /><br /><br />
     <div className="w-full">
-    <h2 className="text-lg underline font-bold">Description</h2>
-    <p className="text-sm">{m.description || 'No information'}</p>
-    <h2 className="text-lg mt-8 underline font-bold">Status</h2>
-    <p className="text-sm">{m.status || 'No information'}</p>
-    <h2 className="text-lg mt-8 underline font-bold">Genres</h2>
-    <p className="text-sm">{m.genres?.join(", ") || 'No information'}</p>
-    <h2 className="text-lg mt-8 underline font-bold">Release</h2>
-    <p className="text-sm">{m.releaseDate || 'No information'}</p>
-    <h2 className="text-lg mt-8 underline font-bold">Other Name(s)</h2>
-    <p className="text-sm">{m.otherName || 'No information'}</p>
-    <h2 className="text-lg mt-8 underline font-bold">{`Episode(s) (${m.totalEpisodes})`}</h2>
-    <p className="text-sm">{a || 'No information'}</p>
+    </div>
     </div>
 */}
     </div>
