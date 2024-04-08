@@ -12,12 +12,13 @@ function Result() {
 
   useEffect(() => {
     if (id) {
-      setLoading(true);
       get(id).then((ans) => {
         console.log(ans);
         setData(ans);
         setLoading(false);
       });
+    } else {
+      setLoading(false);
     }
   }, [id]);
 
