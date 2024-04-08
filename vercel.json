@@ -9,7 +9,7 @@
         },
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://anidon.vercel.app" // Replace with your actual domain
+          "value": "https://anidon.vercel.app"
         },
         {
           "key": "Access-Control-Allow-Methods",
