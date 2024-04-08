@@ -13,7 +13,14 @@ async function get(id) {
 };
 
 async function download(id) {
-  const result = await gogoanime.fetchEpisodeSources(id);
+  const res = await gogoanime.fetchEpisodeSources(id);
+  const d = res.download;
+  let result;
+  if (d) {
+    result = await gogoanime.fetchDirectDownloadLink(d);
+  } else {
+    result = false;
+  };
   return result;
 };
 
