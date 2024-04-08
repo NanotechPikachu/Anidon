@@ -38,7 +38,7 @@ function Result() {
     </div>
     <div className="mt-6 grid grid-flow-row grid-cols-3 overflow-hidden gap-4"> 
     {loading ? (
-    <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>Loading...</p></div>
+    <p>Loading...</p>
       ) : m.length > 0 ? (m?.map((x, index) => ( 
     <div key={index} className="border-2 border-teal-100 overflow-hidden h-26 flex flex-col relative" onClick={() => changePage(x.id)}>
     <div>
@@ -46,7 +46,7 @@ function Result() {
     </div>
     <p className="ml-1 mr-1 text-base">{x.title}</p>
      </div>
-    ))) : (<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>No results</p></div>)}
+    ))) : (<p>No results</p>)}
     </div>
     </div>
     </>
