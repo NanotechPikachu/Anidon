@@ -6,7 +6,7 @@ import { get } from '../functions/gogo.js';
 
 function Result() {
   const [data, setData] = useState({});
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const params = useSearchParams();
   const id = params.get('id');
 
