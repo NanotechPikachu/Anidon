@@ -24,8 +24,10 @@ function Anime() {
  // console.log(!data.title);
   const m = data;
   const l = [];
+  const n = [];
   const a = m.episodes?.map((i) => (l.push(i.number)));
-  console.log(l);
+  const b = m.episodes?.map((i) => (n.push(i.id)));
+  console.log(l, n);
   return (
     <>
     <div className="ml-6 mr-6 mt-6 mb-20">
