@@ -29,7 +29,7 @@ function Download() {
     {loading ? (
         <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>Loading...</p></div>
       ) : m ? (
-    <div>{m}
+    <div>{JSON.stringify(m)}
 {/*
     <div className="mt-20">
     <h1 className="text-2xl text-center font-bold">{`${m.title?.replace('(Dub)', '')} (${m.subOrDub})`}</h1>
