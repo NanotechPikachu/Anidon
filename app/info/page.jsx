@@ -56,7 +56,7 @@ function Anime() {
     <h2 className="text-lg mt-8 underline font-bold">Other Name(s)</h2>
     <p className="text-sm">{m.otherName || 'No information'}</p>
     <h2 className="text-lg mt-8 underline font-bold">{`Episode(s) (${m.totalEpisodes})`}</h2>
-    <div className="mt-2 flex flex-col md:grid md:grid-flow-row md:grid-cols-3 overflow-hidden md:gap-4"> {l?.map((x, index) => (<div key={index}>Episode: {x} </div>)) || 'No information'}</div>
+    <div className="mt-2 flex flex-col md:grid md:grid-flow-row md:grid-cols-3 overflow-hidden md:gap-4"> {l?.map((x, index) => (<div key={index}><p className="mt-2 mb-2 ml-2 mr-2 border-2">Episode: {x} </p></div>)) || 'No information'}</div>
     </div>
     </div>
     ) : (<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>No results Found!</p></div>)}
