@@ -22,6 +22,8 @@ function Result() {
   }, [id]);
 
   const m = data;
+const a = m.episodes?.map((i) => (`Episode: {i.number}`))?.join(", ")
+console.log(a)
   return (
     <>
     <div className="ml-6 mr-6 mt-6">
