@@ -5,6 +5,7 @@ async function Download({ searchParams }) {
   const params = searchParams;
   console.log(params);
   const link = params?.link;
+  const anime = params?.anime;
 
   if (!link) {
     console.error('No link provided in searchParams');
@@ -34,7 +35,7 @@ async function Download({ searchParams }) {
     <>
     <div className="ml-6 mr-6 mt-6 mb-20">
     {m ? (
-    <div>{`${JSON.stringify(m)} | ${JSON.stringify(y)}`}
+    <div>{`${JSON.stringify(m)} | ${JSON.stringify(y)} | ${anime}`}
 {/*
     <div className="mt-20">
     <h1 className="text-2xl text-center font-bold">{`${m.title?.replace('(Dub)', '')} (${m.subOrDub})`}</h1>
