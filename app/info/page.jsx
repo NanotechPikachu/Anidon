@@ -22,7 +22,7 @@ function Result() {
   }, [id]);
 
   const m = data;
-const a = m.episodes?.map((i) => (`Episode: ${i.number}`))?.join(", ")
+  const a = m.episodes?.map((i) => (`Episode: ${i.number}`))?.join(", ")
 console.log(a)
   return (
     <>
@@ -50,7 +50,7 @@ console.log(a)
     <h2 className="text-lg mt-8 underline font-bold">Other Name(s)</h2>
     <p className="text-sm">{m.otherName || 'No information'}</p>
     <h2 className="text-lg mt-8 underline font-bold">{`Episode(s) (${m.totalEpisodes})`}</h2>
-    <p className="text-sm">{m.episodes?.map((i) => (<span key={i.number}> Episode: {i.number} </span>))?.join(", ")|| 'No information'}</p>
+    <p className="text-sm">{a || 'No information'}</p>
     </div>
     </div>
     ) : (<p>No results</p>)}
