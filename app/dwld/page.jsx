@@ -12,9 +12,7 @@ async function Download({ searchParams }) {
   return (
     <>
     <div className="ml-6 mr-6 mt-6 mb-20">
-    {n ? (
-        <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>Loading...</p></div>
-      ) : m ? (
+    {m ? (
     <div>{JSON.stringify(m)}
 {/*
     <div className="mt-20">
