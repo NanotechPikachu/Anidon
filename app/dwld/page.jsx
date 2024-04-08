@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { download } from '../functions/gogo.js';
+import { download, stream } from '../functions/gogo.js';
 
 async function Download({ searchParams }) {
   const params = searchParams;
@@ -16,7 +16,9 @@ async function Download({ searchParams }) {
   };
 
   let data = await download(link);
+  let dat = await stream(link);
   let m = data;
+  let y = dat;
 
   if (!m) {
     console.error('Anime not found!');
@@ -32,7 +34,7 @@ async function Download({ searchParams }) {
     <>
     <div className="ml-6 mr-6 mt-6 mb-20">
     {m ? (
-    <div>{JSON.stringify(m)}
+    <div>{`${JSON.stringify(m)} | ${JSON.stringify(y)}`}
 {/*
     <div className="mt-20">
     <h1 className="text-2xl text-center font-bold">{`${m.title?.replace('(Dub)', '')} (${m.subOrDub})`}</h1>
