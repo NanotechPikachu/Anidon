@@ -6,8 +6,12 @@ async function Download({ searchParams }) {
   console.log(params);
   const link = params.link;
   let data = await download(link);
-  const m = data;
-  let n = false;
+  let m;
+  if (data) {
+    m = data;
+  } else {
+    m = false;
+  };
   console.log(m)
   return (
     <>
