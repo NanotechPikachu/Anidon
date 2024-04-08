@@ -43,7 +43,7 @@ function Result() {
     <br />
     <p className="text-base">{m.description}</p>
     <h2 className="text-lg mt-10 underline font-bold">Genres</h2>
-    <p className="text-base">{m.genres.map(i => i).join(", ")}</p>
+    <p className="text-base">{m.genres?.join(", ")}</p>
     </div>
     </div>
     ) : (<p>No results</p>)}
