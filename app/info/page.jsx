@@ -22,7 +22,7 @@ function Result() {
   }, [id]);
 
   const m = data;
-const a = m.episodes?.map((i) => (`Episode: {i.number}`))?.join(", ")
+const a = m.episodes?.map((i) => (`Episode: ${i.number}`))?.join(", ")
 console.log(a)
   return (
     <>
