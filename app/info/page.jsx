@@ -27,7 +27,7 @@ function Result() {
 console.log(a)
   return (
     <>
-    <div className="ml-6 mr-6 mt-6">
+    <div className="ml-6 mr-6 mt-6 mb-20">
     {loading ? (
         <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>Loading...</p></div>
       ) : m.title ? (
