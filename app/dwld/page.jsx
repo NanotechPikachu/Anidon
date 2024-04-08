@@ -18,9 +18,9 @@ async function Download({ searchParams }) {
   let data = await download(link);
   let dat = await stream(link);
   let m = data;
-  let y = dat;
+  let y = dat?.sources;
 
-  if (!m) {
+  if (!m || !y) {
     console.error('Anime not found!');
     return (
       <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center">
