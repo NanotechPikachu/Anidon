@@ -14,7 +14,7 @@ async function get(id) {
 
 async function download(id) {
   const res = await gogoanime.fetchEpisodeSources(id);
-  const d = res.download;
+  const d = res?.download;
   let result;
   if (d) {
     result = await gogoanime.fetchDirectDownloadLink(d);
