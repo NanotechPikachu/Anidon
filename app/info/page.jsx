@@ -34,14 +34,16 @@ function Result() {
       ) : m ? (
     <div>
     <div className="mt-4 flex justify-center items-center w-full">
-    <div className="h-24 w-20">
+    <div className="h-48 w-44">
     <img src={m.image} alt="Anime pic" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
     </div>
     </div>
     <div className="w-full">
-    <h2 className="text-lg mt-4">Description</h2>
+    <h2 className="text-lg mt-10 underline font-bold">Description</h2>
     <br />
     <p className="text-base">{m.description}</p>
+    <h2 className="text-lg mt-10 underline font-bold">Genres</h2>
+    <p className="text-base">{m.genres.map(i => i).join(", ")}</p>
     </div>
     </div>
     ) : (<p>No results</p>)}
