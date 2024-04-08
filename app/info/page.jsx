@@ -44,7 +44,7 @@ function Result() {
     <h2 className="text-lg mt-8 underline font-bold">Genres</h2>
     <p className="text-sm">{m.genres?.join(", ") || 'No information'}</p>
     <h2 className="text-lg mt-8 underline font-bold">Release</h2>
-    <p className="text-sm">{m.releaseDate || 'No information'}</p
+    <p className="text-sm">{m.releaseDate || 'No information'}</p>
     <h2 className="text-lg mt-8 underline font-bold">Other Name(s)</h2>
     <p className="text-sm">{m.otherName || 'No information'}</p>
     <h2 className="text-lg mt-8 underline font-bold">{`Episode(s) (${m.totalEpisodes})`}</h2>
