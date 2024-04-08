@@ -21,6 +21,7 @@ async function download(id) {
   } else {
     result = false;
   };
+  console.log(d, res, result)
   return result;
 };
 
