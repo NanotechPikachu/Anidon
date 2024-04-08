@@ -12,4 +12,9 @@ async function get(id) {
   return result;
 };
 
-export { search, get }
+async function download(id) {
+  const result = await gogoanime.fetchEpisodeSources(id);
+  return result;
+};
+
+export { search, get, download }
