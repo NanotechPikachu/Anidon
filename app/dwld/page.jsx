@@ -1,26 +1,11 @@
-"use client"
-
-import { useSearchParams } from 'next/navigation';
-import { useState, useEffect, Suspense } from 'react';
+import { Suspense } from 'react';
 import { download } from '../functions/gogo.js';
 
-function Download() {
-  const [data, setData] = useState({});
-  const [loading, setLoading] = useState(true);
-  const params = useSearchParams();
-  const link = params.get('link');
+function Download({ searchParams }) {
+  const params = searchParams;
+  console.log(params);
+  const link = params.link;
 
-  useEffect(() => {
-    if (link) {
-      download(link).then((ans) => {
-        console.log(ans);
-        setData(ans);
-        setLoading(false);
-      });
-    } else {
-      setLoading(false);
-    }
-  }, [link]);
   const m = data;
   console.log(m)
   return (
@@ -62,10 +47,10 @@ function Download() {
   );
 }
 
-export default function Dwld() {
+export default function Dwld({ params, searchParams }) {
   return (
     <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>Loading...</p></div>}>
-      <Download />
+      <Download searchParams={searchParams} />
     </Suspense>
   );
 }
