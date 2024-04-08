@@ -38,12 +38,12 @@ function Result() {
     <img src={m.image} alt="Anime pic" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
     </div>
     </div>
+    <br /><br /><br />
     <div className="w-full">
-    <h2 className="text-lg mt-10 underline font-bold">Description</h2>
-    <br />
-    <p className="text-base">{m.description}</p>
+    <h2 className="text-lg underline font-bold">Description</h2>
+    <p className="text-sm">{m.description}</p>
     <h2 className="text-lg mt-10 underline font-bold">Genres</h2>
-    <p className="text-base">{m.genres?.join(", ")}</p>
+    <p className="text-sm">{m.genres?.join(", ")}</p>
     </div>
     </div>
     ) : (<p>No results</p>)}
