@@ -41,8 +41,14 @@ async function Download({ searchParams }) {
     <h1 className="text-2xl text-center font-bold">{anime}</h1>
     <p className="font-mono mt-3 text-sm text-center">{`Episode: ${episode}`}</p>
     </div>
-    <div className="w-full mt-4">
-    <h1 className="text-xl font-bold">Download Link(s)</h1>
+    <div className="w-full mt-6">
+    <h1 className="text-xl font-bold underline">Stream Link(s)</h1>
+    <div className="mt-2">
+    {y?.map((i) => ( <div key={i.quality}><a href={i.url}><div className="border-2 flex justify-center items-center"><p className="text-base p-2">{i.quality}</p></div></a></div> ))}
+    </div>
+    </div>
+    <div className="w-full mt-6">
+    <h1 className="text-xl font-bold underline">Download Link(s)</h1>
     <div className="mt-2">
     {m?.map((i) => ( <div key={i.source}><a href={i.link}><div className="border-2 flex justify-center items-center"><p className="text-base p-2">{i.source}</p></div></a></div> ))}
     </div>
