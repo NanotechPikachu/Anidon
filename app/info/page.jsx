@@ -21,7 +21,7 @@ function Result() {
       setLoading(false);
     }
   }, [id]);
-  console.log(data === {});
+  console.log(!data.title);
   const m = data;
   const a = m.episodes?.map((i) => (`Episode: ${i.number}`))?.join(", ")
 console.log(a)
