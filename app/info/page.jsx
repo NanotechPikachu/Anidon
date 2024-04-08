@@ -29,7 +29,7 @@ console.log(a)
     <>
     <div className="ml-6 mr-6 mt-6">
     {loading ? (
-        <p>Loading...</p>
+        <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>Loading...</p></div>
       ) : m.title ? (
     <div>
     <div className="mt-20">
@@ -56,7 +56,7 @@ console.log(a)
     <p className="text-sm">{a || 'No information'}</p>
     </div>
     </div>
-    ) : (<p>No results</p>)}
+    ) : (<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>No results Found!</p></div>)}
     </div>
     </>
   );
