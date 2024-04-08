@@ -36,15 +36,17 @@ async function Download({ searchParams }) {
     <>
     <div className="ml-6 mr-6 mt-6 mb-20">
     {m ? (
-    <div>{`${JSON.stringify(m)} | ${JSON.stringify(y)}`}
+    <div>{/*`${JSON.stringify(m)} | ${JSON.stringify(y)}`*/}
     <div className="mt-20">
     <h1 className="text-2xl text-center font-bold">{anime}</h1>
     <p className="font-mono mt-3 text-sm text-center">{`Episode: ${episode}`}</p>
     </div>
-{/*
-    <div className="w-full">
+    <div className="w-full mt-4">
+    <h1 className="text-xl font-bold">Download Link(s)</h1>
+    <div className="mt-2">
+    {m?.map((i) => ( <div key={i.source}><a href={i.link}><div className="border-2 flex justify-center items-center"><p className="text-base p-2">{i.source}</p></div></a></div> ))}
     </div>
-*/}
+    </div>
     </div>
     ) : (<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>No results Found!</p></div>)}
     </div>
