@@ -4,14 +4,9 @@ import { download } from '../functions/gogo.js';
 async function Download({ searchParams }) {
   const params = searchParams;
   console.log(params);
-  const link = params.link;
+  const link = params?.link;
   let data = await download(link);
-  let m;
-  if (data) {
-    m = data;
-  } else {
-    m = false;
-  };
+  let m = data || false;
   console.log(m)
   return (
     <>
