@@ -25,7 +25,6 @@ function Anime() {
   const m = data;
   const l = [];
   const a = m.episodes?.map((i) => (l.push(i.number)));
-console.log(a)
   return (
     <>
     <div className="ml-6 mr-6 mt-6 mb-20">
@@ -54,7 +53,7 @@ console.log(a)
     <h2 className="text-lg mt-8 underline font-bold">Other Name(s)</h2>
     <p className="text-sm">{m.otherName || 'No information'}</p>
     <h2 className="text-lg mt-8 underline font-bold">{`Episode(s) (${m.totalEpisodes})`}</h2>
-    <p className="text-sm">{a || 'No information'}</p>
+    <p className="text-sm">{a?.map((x, index) => (<span key={index}>Episode: {x} </span>)) || 'No information'}</p>
     </div>
     </div>
     ) : (<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>No results Found!</p></div>)}
