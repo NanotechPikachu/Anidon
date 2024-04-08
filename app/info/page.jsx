@@ -4,7 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import { useState, useEffect, Suspense } from 'react';
 import { get } from '../functions/gogo.js';
 
-function Result() {
+function Anime() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
   const params = useSearchParams();
@@ -62,10 +62,10 @@ console.log(a)
   );
 }
 
-export default function Res() {
+export default function Info() {
   return (
     <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>Loading...</p></div>}>
-      <Result />
+      <Anime />
     </Suspense>
   );
 }
