@@ -2,17 +2,17 @@
 
 import { useSearchParams } from 'next/navigation';
 import { useState, useEffect, Suspense } from 'react';
-import { get } from '../functions/gogo.js';
+import { download } from '../functions/gogo.js';
 
 function Download() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
   const params = useSearchParams();
-  const id = params.get('id');
+  const link = params.get('link');
 
   useEffect(() => {
     if (link) {
-      get(link).then((ans) => {
+      download(link).then((ans) => {
         console.log(ans);
         setData(ans);
         setLoading(false);
@@ -28,8 +28,8 @@ function Download() {
     <div className="ml-6 mr-6 mt-6 mb-20">
     {loading ? (
         <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>Loading...</p></div>
-      ) : m.title ? (
-    <div>
+      ) : m ? (
+    <div>{m}
 {/*
     <div className="mt-20">
     <h1 className="text-2xl text-center font-bold">{`${m.title?.replace('(Dub)', '')} (${m.subOrDub})`}</h1>
