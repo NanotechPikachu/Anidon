@@ -22,7 +22,7 @@ function Download() {
     }
   }, [link]);
   const m = data;
-  
+  console.log(m)
   return (
     <>
     <div className="ml-6 mr-6 mt-6 mb-20">
