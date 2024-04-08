@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { download } from '../functions/gogo.js';
 
-function Download({ searchParams }) {
+async function Download({ searchParams }) {
   const params = searchParams;
   console.log(params);
   const link = params.link;
