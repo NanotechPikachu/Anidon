@@ -26,7 +26,7 @@ function Result() {
     <>
     <div className="ml-6 mr-6">
     <div className="mt-20">
-    <h1 className="text-2xl text-center font-bold">{m.title}</h1>
+    <h1 className="text-2xl text-center font-bold">{`${m.title?.replace('(Dub)', '')} (${m.subOrDub})`}</h1>
     </div>
     <div className="mt-6"> 
     {loading ? (
@@ -41,9 +41,11 @@ function Result() {
     <br /><br /><br />
     <div className="w-full">
     <h2 className="text-lg underline font-bold">Description</h2>
-    <p className="text-sm">{m.description}</p>
+    <p className="text-sm">{m.description || 'No information'}</p>
     <h2 className="text-lg mt-10 underline font-bold">Genres</h2>
-    <p className="text-sm">{m.genres?.join(", ")}</p>
+    <p className="text-sm">{m.genres?.join(", ") || 'No information'}</p>
+    <h2 className="text-lg mt-10 underline font-bold">Release</h2>
+    <p className="text-sm">{m.releaseDate || 'No information'}</p>
     </div>
     </div>
     ) : (<p>No results</p>)}
