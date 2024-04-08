@@ -23,7 +23,8 @@ function Anime() {
   }, [id]);
  // console.log(!data.title);
   const m = data;
-  const a = m.episodes?.map((i) => (`Episode: ${i.number}`))?.join(", ")
+  const l = [];
+  const a = m.episodes?.map((i) => (l.push(i.number)));
 console.log(a)
   return (
     <>
