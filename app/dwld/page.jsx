@@ -3,7 +3,6 @@ import { download, stream } from '../functions/gogo.js';
 
 async function Download({ searchParams }) {
   const params = searchParams;
-  console.log(params);
   const link = params?.link;
   const anime = params?.anime;
   const episode = params?.episode;
@@ -11,7 +10,7 @@ async function Download({ searchParams }) {
   if (!link) {
     return (
       <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center">
-      <p>Invalid Anime!</p>
+      <p className="text-violet-600 text-lg md:text-xl">Invalid Anime!</p>
       </div>
     );
   };
@@ -24,7 +23,7 @@ async function Download({ searchParams }) {
   if (!m || !y) {
     return (
       <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center">
-      <p>Anime Not Found!</p>
+      <p className="text-violet-600 text-lg md:text-xl">Anime Not Found!</p>
       </div>
     );
   };
@@ -41,13 +40,13 @@ async function Download({ searchParams }) {
     <div className="w-full mt-6">
     <h1 className="text-xl font-bold underline">Stream Link(s)</h1>
     <div className="mt-2">
-    {y?.map((i) => ( <div key={i.quality}><a href={i.url}><div className="border-2 flex justify-center items-center cursor-pointer"><p className="text-base p-2">{i.quality}</p></div></a></div> ))}
+    {y?.map((i) => ( <div key={i.quality}><a href={i.url}><div className="border-2 border-violet-700 flex justify-center items-center cursor-pointer"><p className="text-base p-2">{i.quality}</p></div></a></div> ))}
     </div>
     </div>
     <div className="w-full mt-6">
     <h1 className="text-xl font-bold underline">Download Link(s)</h1>
     <div className="mt-2">
-    {m?.map((i) => ( <div key={i.source}><a href={i.link}><div className="border-2 flex justify-center items-center cursor-pointer"><p className="text-base p-2">{i.source}</p></div></a></div> ))}
+    {m?.map((i) => ( <div key={i.source}><a href={i.link}><div className="border-2 border-violet-700 flex justify-center items-center cursor-pointer"><p className="text-base p-2">{i.source}</p></div></a></div> ))}
     </div>
     </div>
     </div>
@@ -59,7 +58,7 @@ async function Download({ searchParams }) {
 
 export default function Dwld({ params, searchParams }) {
   return (
-    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-amber-400 dark:text-amber-300 text-lg md:text-xl">Loading...</p></div>}>
+    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-violet-600 text-lg md:text-xl">Loading...</p></div>}>
       <Download searchParams={searchParams} />
     </Suspense>
   );
