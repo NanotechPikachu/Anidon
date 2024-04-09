@@ -13,7 +13,7 @@ function Anime() {
   const router = useRouter();
 
   function changePage(link, anime, episode) {
-    router.push(`dwld?link=${encodeURIComponent(link)}&anime=${encodeURIComponenet(anime)}&episode=${encodeURIComponenet(episode)}`);
+    router.push(`dwld?link=${encodeURIComponent(link)}&anime=${encodeURIComponent(anime)}&episode=${encodeURIComponent(episode)}`);
   };
 
   useEffect(() => {
