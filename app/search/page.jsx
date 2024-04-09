@@ -1,9 +1,8 @@
 "use client"
 
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { useState, useEffect, Suspense } from 'react';
 import { search } from '../functions/gogo.js';
-import { useRouter } from 'next/navigation';
 
 function Result() {
   const [data, setData] = useState({ results: [] });
