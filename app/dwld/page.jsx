@@ -34,8 +34,8 @@ async function Download({ searchParams }) {
     {m ? (
     <div>
     <div className="mt-20">
-    <h1 className="text-2xl text-center font-bold text-violet-950">{anime}</h1>
-    <p className="font-mono mt-3 text-sm text-center text-slate-50">{`Episode: ${episode}`}</p>
+    <h1 className="text-2xl text-center font-bold text-violet-900 hover:text-purple-400">{anime}</h1>
+    <p className="font-mono mt-3 text-sm md:text-base text-center text-slate-50">{`Episode: ${episode}`}</p>
     </div>
     <div className="w-full mt-6">
     <h1 className="text-xl font-bold underline text-white">Stream Link(s)</h1>
