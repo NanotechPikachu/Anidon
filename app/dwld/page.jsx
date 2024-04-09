@@ -32,21 +32,21 @@ async function Download({ searchParams }) {
     <>
     <div className="ml-6 mr-6 mt-6 mb-20">
     {m ? (
-    <div>{/*`${JSON.stringify(m)} | ${JSON.stringify(y)}`*/}
+    <div>
     <div className="mt-20">
-    <h1 className="text-2xl text-center font-bold">{anime}</h1>
-    <p className="font-mono mt-3 text-sm text-center">{`Episode: ${episode}`}</p>
+    <h1 className="text-2xl text-center font-bold text-violet-950">{anime}</h1>
+    <p className="font-mono mt-3 text-sm text-center text-slate-50">{`Episode: ${episode}`}</p>
     </div>
     <div className="w-full mt-6">
-    <h1 className="text-xl font-bold underline">Stream Link(s)</h1>
+    <h1 className="text-xl font-bold underline text-white">Stream Link(s)</h1>
     <div className="mt-2">
-    {y?.map((i) => ( <div key={i.quality}><a href={i.url}><div className="border-2 border-violet-700 flex justify-center items-center cursor-pointer"><p className="text-base p-2">{i.quality}</p></div></a></div> ))}
+    {y?.map((i) => ( <div key={i.quality}><a href={i.url}><div className="border-2 border-violet-700 flex justify-center items-center cursor-pointer"><p className="text-base p-2 text-slate-50">{i.quality}</p></div></a></div> ))}
     </div>
     </div>
     <div className="w-full mt-6">
-    <h1 className="text-xl font-bold underline">Download Link(s)</h1>
+    <h1 className="text-xl font-bold underline text-white">Download Link(s)</h1>
     <div className="mt-2">
-    {m?.map((i) => ( <div key={i.source}><a href={i.link}><div className="border-2 border-violet-700 flex justify-center items-center cursor-pointer"><p className="text-base p-2">{i.source}</p></div></a></div> ))}
+    {m?.map((i) => ( <div key={i.source}><a href={i.link}><div className="border-2 border-violet-700 flex justify-center items-center cursor-pointer"><p className="text-base p-2 text-slate-50">{i.source}</p></div></a></div> ))}
     </div>
     </div>
     </div>
