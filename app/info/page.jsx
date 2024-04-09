@@ -47,7 +47,7 @@ function Anime() {
     <div className="mt-4 flex justify-center items-center w-full bg-cover h-[194px] bg-no-repeat bg-center" style={{ backgroundImage: `url('${m.image}')`, height: "100%", width: "100%" }}>
     <div className="h-full w-full backdrop-blur-sm">
     <div className="h-48 w-44">
-    <img src={m.image} alt="Anime pic" style={{ width: '100%', height: 'auto', objectFit: 'cotain', objectPosition: 'center' }} />
+    <img src={m.image} alt="Anime pic" style={{ width: '100%', height: 'auto', objectFit: 'contain', objectPosition: 'center' }} />
     </div>
     </div>
     </div>
