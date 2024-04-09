@@ -18,7 +18,6 @@ function Result() {
   useEffect(() => {
     if (anime) {
       search(anime).then((ans) => {
-        console.log(ans);
         setData(ans);
         setLoading(false);
       });
@@ -37,9 +36,9 @@ function Result() {
     </div>
     <div className="mt-6 grid grid-flow-row grid-cols-3 overflow-hidden gap-4"> 
     {loading ? (
-    <p className="text-amber-400 dark:text-amber-300 text-lg md:text-xl">Loading...</p>
+    <p className="text-violet-600 text-lg md:text-xl">Loading...</p>
       ) : m.length > 0 ? (m?.map((x, index) => ( 
-    <div key={index} className="border-2 border-teal-100 overflow-hidden h-26 flex flex-col relative cursor-pointer" onClick={() => changePage(x.id)}>
+    <div key={index} className="border-2 border-violet-700 overflow-hidden h-26 flex flex-col relative cursor-pointer" onClick={() => changePage(x.id)}>
     <div>
     <img src={x.image} alt="Anime pic" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
     </div>
@@ -54,7 +53,7 @@ function Result() {
 
 export default function Res() {
   return (
-    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-amber-400 dark:text-amber-300 text-lg md:text-xl">Loading...</p></div>}>
+    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-violet-600 text-lg md:text-xl">Loading...</p></div>}>
       <Result />
     </Suspense>
   );
