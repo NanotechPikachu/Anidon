@@ -47,7 +47,9 @@ function Anime() {
     <div className="mt-4 flex justify-center items-center w-full bg-cover h-[252px] bg-no-repeat bg-center" style={{ backgroundImage: `url('${m.image}')`, height: "100%", width: "100%" }}>
     <div className="h-full w-full backdrop-blur-sm">
     <div className="h-48 w-44">
+    <Suspense fallback={<div className="flex h-full w-full items-center justify-center text-center"><p className="text-violet-600 text-lg md:text-xl">Loading Image...</p></div>}>
     <Image src={m.image} alt="Anime pic" width={224} height={250} objectFit="contain" style={{ float: 'left' }} />
+    </Suspense>
     </div>
     </div>
     </div>
