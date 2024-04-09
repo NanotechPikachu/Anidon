@@ -3,6 +3,7 @@
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useState, useEffect, Suspense } from 'react';
 import { get } from '../functions/gogo.js';
+import Image from 'next/image';
 
 function Anime() {
   const [data, setData] = useState({});
@@ -42,6 +43,7 @@ function Anime() {
     <div>
     <div className="mt-20">
     <h1 className="text-2xl text-center font-bold">{`${m.title?.replace('(Dub)', '')} (${m.subOrDub})`}</h1>
+<Image src={m.image} />
     </div>
     <div className="mt-4 flex justify-center items-center w-full bg-cover h-[252px] bg-no-repeat bg-center" style={{ backgroundImage: `url('${m.image}')`, height: "100%", width: "100%" }}>
     <div className="h-full w-full backdrop-blur-sm">
