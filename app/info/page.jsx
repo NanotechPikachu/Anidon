@@ -51,6 +51,7 @@ function Anime() {
     </div>
     </div>
     </div>
+    <br /> <br /> <br />
     <div className="w-full">
     <h2 className="text-lg underline font-bold">Description</h2>
     <p className="text-sm">{m.description || 'No information'}</p>
