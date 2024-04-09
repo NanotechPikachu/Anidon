@@ -42,7 +42,7 @@ function Anime() {
       ) : m.title ? (
     <div>
     <div className="mt-20">
-    <h1 className="text-2xl text-center font-bold text-white">{`${m.title?.replace('(Dub)', '')} (${m.subOrDub})`}</h1>
+    <h1 className="text-2xl text-center font-bold text-violet-900 hover:text-violet-400">{`${m.title?.replace('(Dub)', '')} (${m.subOrDub})`}</h1>
     </div>
     <div className="mt-4 flex justify-center items-center w-full bg-cover h-[252px] bg-no-repeat bg-center" style={{ backgroundImage: `url('${m.image}')`, height: "100%", width: "100%" }}>
     <div className="h-full w-full backdrop-blur-sm">
