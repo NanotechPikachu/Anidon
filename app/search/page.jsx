@@ -3,6 +3,7 @@
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useState, useEffect, Suspense } from 'react';
 import { search } from '../functions/gogo.js';
+import Image from 'next/image';
 
 function Result() {
   const [data, setData] = useState({ results: [] });
@@ -40,7 +41,7 @@ function Result() {
       ) : m.length > 0 ? (m?.map((x, index) => ( 
     <div key={index} className="border-2 border-violet-700 overflow-hidden h-26 flex flex-col relative cursor-pointer" onClick={() => changePage(x.id)}>
     <div>
-    <img src={x.image} alt="Anime pic" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
+    <Image src={x.image} alt="Anime pic" objectFit="cover" style={{ width: '100%', height: 'auto' }} />
     </div>
     <p className="ml-1 mr-1 text-base">{x.title}</p>
      </div>
