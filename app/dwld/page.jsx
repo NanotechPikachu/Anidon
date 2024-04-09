@@ -41,7 +41,7 @@ async function Download({ searchParams }) {
     <h1 className="text-xl font-bold underline text-white">Stream Link(s)</h1>
     <div className="mt-2">
     {y?.map((i) => (
-    <div key={i.quality} className="group border-2 border-violet-700 relative bg-black text-white hover:text-black transition duration-500 ease-in-out overflow-hidden">
+    <div key={i.quality} className="group border-2 border-violet-700 relative bg-black text-white hover:text-black transition duration-500 ease-in-out overflow-hidden cursor-pointer">
     <a href={i.url} className="block w-full h-full">
     <div className="absolute inset-0 bg-violet-500 transition-transform duration-500 ease-in-out transform group-hover:translate-x-0 -translate-x-full"></div>
     <p className="relative p-2 cursor-pointer text-slate-50 transition-colors duration-500 ease-in-out group-hover:text-black">{i.quality}</p>
@@ -53,7 +53,14 @@ async function Download({ searchParams }) {
     <div className="w-full mt-6">
     <h1 className="text-xl font-bold underline text-white">Download Link(s)</h1>
     <div className="mt-2">
-    {m?.map((i) => ( <div key={i.source}><a href={i.link}><div className="border-2 border-violet-700 flex justify-center items-center cursor-pointer"><p className="text-base p-2 text-slate-50">{i.source}</p></div></a></div> ))}
+    {m?.map((i) => ( 
+    <div key={i.source} className="group border-2 border-violet-700 relative bg-black text-white hover:text-black transition duration-500 ease-in-out overflow-hidden cursor-pointer">
+    <a href={i.link} className="block w-full h-full">
+    <div className="absolute inset-0 bg-violet-500 transition-transform duration-500 ease-in-out transform group-hover:translate-x-0 -translate-x-full"></div>
+    <p className="relative p-2 cursor-pointer text-slate-50 transition-colors duration-500 ease-in-out group-hover:text-black">{i.source}</p>
+    </a>
+    </div> 
+    ))}
     </div>
     </div>
     </div>
