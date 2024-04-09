@@ -9,7 +9,6 @@ async function Download({ searchParams }) {
   const episode = params?.episode;
 
   if (!link) {
-    console.error('No link provided in searchParams');
     return (
       <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center">
       <p>Invalid Anime!</p>
@@ -23,7 +22,6 @@ async function Download({ searchParams }) {
   let y = dat?.sources;
 
   if (!m || !y) {
-    console.error('Anime not found!');
     return (
       <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center">
       <p>Anime Not Found!</p>
@@ -31,7 +29,6 @@ async function Download({ searchParams }) {
     );
   };
 
-  console.log(m)
   return (
     <>
     <div className="ml-6 mr-6 mt-6 mb-20">
@@ -54,7 +51,7 @@ async function Download({ searchParams }) {
     </div>
     </div>
     </div>
-    ) : (<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>No results Found!</p></div>)}
+    ) : (<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-amber-400 dark:text-am er-300 text-lg md:text-xl">No results Found!</p></div>)}
     </div>
     </>
   );
@@ -62,7 +59,7 @@ async function Download({ searchParams }) {
 
 export default function Dwld({ params, searchParams }) {
   return (
-    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>Loading...</p></div>}>
+    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-amber-400 dark:text-am er-300 text-lg md:text-xl">Loading...</p></div>}>
       <Download searchParams={searchParams} />
     </Suspense>
   );
