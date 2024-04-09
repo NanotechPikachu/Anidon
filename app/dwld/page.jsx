@@ -40,7 +40,14 @@ async function Download({ searchParams }) {
     <div className="w-full mt-6">
     <h1 className="text-xl font-bold underline text-white">Stream Link(s)</h1>
     <div className="mt-2">
-    {y?.map((i) => ( <div key={i.quality}><a href={i.url}><div className="border-2 border-violet-700 flex justify-center items-center cursor-pointer"><p className="text-base p-2 text-slate-50">{i.quality}</p></div></a></div> ))}
+    {y?.map((i) => (
+    <div key={i.quality} className="group border-2 border-violet-700 overflow-hidden">
+    <a href={i.url} className="block relative">
+    <div className="absolute inset-0 bg-black transition-transform duration-500 ease-in-out transform -translate-x-full group-hover:translate-x-0"></div>
+    <p className="relative text-base p-2 text-white transition-colors duration-500 ease-in-out group-hover:text-black">{i.quality}</p>
+    </a>
+    </div>
+  ))}
     </div>
     </div>
     <div className="w-full mt-6">
