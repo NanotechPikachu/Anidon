@@ -3,12 +3,19 @@
 import { useSearchParams } from 'next/navigation';
 import { useState, useEffect, Suspense } from 'react';
 import { get } from '../functions/gogo.js';
+import { useRouter } from 'next/navigation';
 
 function Anime() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
   const params = useSearchParams();
   const id = params.get('id');
+
+  const router = useRouter();
+
+  function changePage(link, anime, episode) {
+    router.push(`dwld?link=${encodeURIComponent(link)}&${encodeURIComponenet(anime)}&${encodeURIComponenet(episode)}`);
+  };
 
   useEffect(() => {
     if (id) {
@@ -21,13 +28,13 @@ function Anime() {
       setLoading(false);
     }
   }, [id]);
- // console.log(!data.title);
+ 
   const m = data;
   const l = [];
   const n = [];
   const a = m.episodes?.map((i) => (l.push(i.number)));
   const b = m.episodes?.map((i) => (n.push(i.id)));
-  console.log(l, n);
+  
   return (
     <>
     <div className="ml-6 mr-6 mt-6 mb-20">
@@ -56,7 +63,7 @@ function Anime() {
     <h2 className="text-lg mt-8 underline font-bold">Other Name(s)</h2>
     <p className="text-sm">{m.otherName || 'No information'}</p>
     <h2 className="text-lg mt-8 underline font-bold">{`Episode(s) (${m.totalEpisodes})`}</h2>
-    <div className="mt-2 flex flex-col md:grid md:grid-flow-row md:grid-cols-3 overflow-hidden md:gap-4"> {l?.map((x, index) => (<div key={index}><p className="border-2 p-2">Episode: {x} </p></div>)) || 'No information'}</div>
+    <div className="mt-2 flex flex-col md:grid md:grid-flow-row md:grid-cols-3 overflow-hidden md:gap-4"> {l?.map((x, index) => (<div key={index} onClick={() => changePage(n[index], m.title, index + 1)}><p className="border-2 p-2">Episode: {x} </p></div>)) || 'No information'}</div>
     </div>
     </div>
     ) : (<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p>No results Found!</p></div>)}
