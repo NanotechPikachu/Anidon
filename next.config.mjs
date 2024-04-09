@@ -5,7 +5,7 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'gogocdn.net',
-        pathname: '/images/**',
+        pathname: '/**',
       },
     ],
   },
