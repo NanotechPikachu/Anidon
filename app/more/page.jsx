@@ -10,7 +10,7 @@ async function More() {
     )
   };
 
-  m = data;
+  const m = data;
 
   return (
     <>
