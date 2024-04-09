@@ -66,7 +66,7 @@ function Anime() {
     <h2 className="text-lg mt-8 underline font-bold text-white">Other Name(s)</h2>
     <p className="text-sm text-slate-50">{m.otherName || 'No information'}</p>
     <h2 className="text-lg mt-8 underline font-bold text-white">{`Episode(s) (${m.totalEpisodes})`}</h2>
-    <div className="mt-2 flex flex-col md:grid md:grid-flow-row md:grid-cols-3 overflow-hidden md:gap-4"> {l?.map((x, index) => (<div key={index} onClick={() => changePage(n[index], m.title, index + 1)} className="border-2 border-violet-700 relative bg-black text-white hover:text-black transition duration-500 ease-in-out"><div className="border-2 border-violet-700 absolute inset-0 bg-violet-500 transition-transform duration-500 ease-in-out transform -translate-x-full hover:translate-x-0"></div><p className="p-2 cursor-pointer text-slate-50">Episode: {x} </p></div></div>)) || 'No information'}</div>
+    <div className="mt-2 flex flex-col md:grid md:grid-flow-row md:grid-cols-3 overflow-hidden md:gap-4"> {l?.map((x, index) => (<div key={index} onClick={() => changePage(n[index], m.title, index + 1)} className="border-2 border-violet-700 relative bg-black text-white hover:text-black transition duration-500 ease-in-out"><div className="border-2 border-violet-700 absolute inset-0 bg-violet-500 transition-transform duration-500 ease-in-out transform -translate-x-full hover:translate-x-0"></div><p className="p-2 cursor-pointer text-slate-50">Episode: {x} </p></div>)) || 'No information'}</div>
     </div>
     </div>
     ) : (<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-orange-500 dark:text-orange-400 text-lg md:text-xl">No results Found!</p></div>)}
