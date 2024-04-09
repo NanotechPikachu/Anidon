@@ -37,7 +37,7 @@ function Result() {
     </div>
     <div className="mt-6 grid grid-flow-row grid-cols-3 overflow-hidden gap-4"> 
     {loading ? (
-    <p className="text-amber-400 dark:text-am er-300 text-lg md:text-xl">Loading...</p>
+    <p className="text-amber-400 dark:text-amber-300 text-lg md:text-xl">Loading...</p>
       ) : m.length > 0 ? (m?.map((x, index) => ( 
     <div key={index} className="border-2 border-teal-100 overflow-hidden h-26 flex flex-col relative cursor-pointer" onClick={() => changePage(x.id)}>
     <div>
@@ -45,7 +45,7 @@ function Result() {
     </div>
     <p className="ml-1 mr-1 text-base">{x.title}</p>
      </div>
-    ))) : (<p className="text-amber-400 dark:text-am er-300 text-lg md:text-xl">No results</p>)}
+    ))) : (<p className="text-orange-500 dark:text-orange-400 text-lg md:text-xl">No results</p>)}
     </div>
     </div>
     </>
@@ -54,7 +54,7 @@ function Result() {
 
 export default function Res() {
   return (
-    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-amber-400 dark:text-am er-300 text-lg md:text-xl">Loading...</p></div>}>
+    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-amber-400 dark:text-amber-300 text-lg md:text-xl">Loading...</p></div>}>
       <Result />
     </Suspense>
   );
