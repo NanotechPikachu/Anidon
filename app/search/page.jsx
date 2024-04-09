@@ -32,8 +32,8 @@ function Result() {
     <>
     <div className="ml-6 mr-6 mb-20">
     <div className="mt-20">
-    <h1 className="text-2xl text-center font-bold">Search results...</h1>
-    <p className="text-center font-mono text-sm"><i>Query: {anime}</i></p>
+    <h1 className="text-2xl text-center font-bold text-white">Search results...</h1>
+    <p className="text-center font-mono text-sm text-white"><i>Query: {anime}</i></p>
     </div>
     <div className="mt-6 grid grid-flow-row grid-cols-3 overflow-hidden gap-4"> 
     {loading ? (
@@ -45,7 +45,7 @@ function Result() {
     <Image src={x.image} alt="Anime pic" objectFit="cover" style={{ width: '100%', height: 'auto' }} />
     </Suspense>
     </div>
-    <p className="ml-1 mr-1 text-base">{x.title}</p>
+    <p className="ml-1 mr-1 text-base md:text-lg text-white text-center">{x.title}</p>
      </div>
     ))) : (<p className="text-orange-500 dark:text-orange-400 text-lg md:text-xl">No results</p>)}
     </div>
