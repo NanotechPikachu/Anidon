@@ -44,7 +44,7 @@ async function Download({ searchParams }) {
     <div className="w-full mt-6">
     <h1 className="text-xl font-bold underline">Stream Link(s)</h1>
     <div className="mt-2">
-    {y?.map((i) => ( <div key={i.quality}><a href={i.url}><div className="border-2 flex justify-center items-center"><p className="text-base p-2">{i.quality}</p></div></a></div> ))}
+    {y?.map((i) => ( <div key={i.quality}><a href={i.url}><div className="border-2 flex justify-center items-center cursor-pointer"><p className="text-base p-2">{i.quality}</p></div></a></div> ))}
     </div>
     </div>
     <div className="w-full mt-6">
