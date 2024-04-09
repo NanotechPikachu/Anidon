@@ -50,7 +50,7 @@ async function Download({ searchParams }) {
     <div className="w-full mt-6">
     <h1 className="text-xl font-bold underline">Download Link(s)</h1>
     <div className="mt-2">
-    {m?.map((i) => ( <div key={i.source}><a href={i.link}><div className="border-2 flex justify-center items-center"><p className="text-base p-2">{i.source}</p></div></a></div> ))}
+    {m?.map((i) => ( <div key={i.source}><a href={i.link}><div className="border-2 flex justify-center items-center cursor-pointer"><p className="text-base p-2">{i.source}</p></div></a></div> ))}
     </div>
     </div>
     </div>
