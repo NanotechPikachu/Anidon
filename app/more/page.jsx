@@ -21,10 +21,10 @@ async function More() {
     <div className="mt-20">
     <h1 className="text-2xl text-center font-bold text-violet-900 hover:text-purple-400">Trending</h1>
     </div>
-    <div className="mt-4 grid grid-flow-col max-w-screen grid-rows-1 gap-2 overflow-x-auto h-full">
+    <div className="mt-4 grid grid-flow-col max-w-screen grid-rows-1 gap-2 overflow-x-auto">
     {m.map((x, index) => (
-    <div className="w-32" key={x?.title?.romaji}>
-    <Image src={x.image} alt="Anime pic" objectFit="cover" />
+    <div className="w-32 h-full" key={x?.title?.romaji}>
+    <Image src={x.image} alt="Anime pic" objectFit="fill" />
     </div>
     ))}
     </div>
