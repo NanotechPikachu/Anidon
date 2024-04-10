@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import { download, stream } from '../functions/gogo.js';
+import NavBar from "@/app/components/NavBar.jsx";
 
 async function Download({ searchParams }) {
   const params = searchParams;
@@ -33,7 +34,8 @@ async function Download({ searchParams }) {
     <div className="ml-6 mr-6 mt-6 mb-20">
     {m ? (
     <div>
-    <div className="mt-20">
+    <div className="mt-20 md:mt-24">
+    <NavBar />
     <h1 className="text-2xl md:text-3xl text-center font-bold text-violet-900 hover:text-purple-400">{anime}</h1>
     <p className="font-mono mt-3 text-sm md:text-base text-center text-slate-50">{`Episode: ${episode}`}</p>
     </div>
