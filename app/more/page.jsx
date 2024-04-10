@@ -23,10 +23,10 @@ async function More() {
     <div>
     <h1 className="text-2xl text-center font-bold bg-opacity-50 backdrop-blur-sm bg-clip-text bg-gradient-to-r text-white from-slate-50 via-white/25 to-slate-50 animate-gloss">Trending</h1>
     </div>
-    <div className="mt-4 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-0.5 overflow-x-auto h-36">
+    <div className="mt-4 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-1 overflow-x-auto h-36">
     {m.map((x, index) => (
-    <div className="relative w-32 h-full flex items-stretch" key={x?.title?.romaji}>
-    <Image src={x.image} alt="Anime pic" className="w-full h-full object-contain opacity-30 border-2 border-violet-500" />
+    <div className="relative w-24 h-full flex items-stretch" key={x?.title?.romaji}>
+    <Image src={x.image} alt="Anime pic" className="w-full h-full object-contain opacity-75 border-2 border-violet-500" />
     </div>
     ))}
     </div>
