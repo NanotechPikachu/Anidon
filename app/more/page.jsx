@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { trending, popular } from '../functions/anilist.js';
 import Image from 'next/image';
 import TRENDINGANIME from "@/app/assets/TRENDINGANIME.png";
+import POPULARANIME2 from "@/app/assets/POPULARANIME2.png";
 
 async function More() {
   const data = await trending();
@@ -33,8 +34,8 @@ async function More() {
     ))}
     </div>
     </div>
-    <div className="mt-16">
-    <h1 className="text-2xl text-center font-bold bg-opacity-50 backdrop-blur-sm bg-clip-text bg-gradient-to-r text-white from-slate-50 via-white/25 to-slate-50 animate-gloss">Popular</h1>
+    <div className="MT-16 w-full flex md:h-16 h-12 justify-center items-center">
+    <Image src={POPULARANIME2} className="h-full w-1/2 object-contain" />
     </div>
     <div className="hide-scroll mt-6 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
     {n.map((x, index) => (
