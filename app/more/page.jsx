@@ -24,7 +24,7 @@ async function More() {
     {m ? (
     <>
     <NavBar />
-    <div className="mt-20">
+    <div className="mt-20 md:mt-24">
     <div className="w-full flex md:h-16 h-12 justify-center items-center">
     <Image src={TRENDINGANIME} className="h-full w-1/2 object-contain" />
     </div>
