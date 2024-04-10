@@ -34,7 +34,7 @@ async function Download({ searchParams }) {
     {m ? (
     <div>
     <div className="mt-20">
-    <h1 className="text-2xl text-center font-bold text-violet-900 hover:text-purple-400">{anime}</h1>
+    <h1 className="text-2xl md:text-3xl text-center font-bold text-violet-900 hover:text-purple-400">{anime}</h1>
     <p className="font-mono mt-3 text-sm md:text-base text-center text-slate-50">{`Episode: ${episode}`}</p>
     </div>
     <div className="w-full mt-6">
@@ -72,7 +72,7 @@ async function Download({ searchParams }) {
 
 export default function Dwld({ params, searchParams }) {
   return (
-    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-violet-600 text-lg md:text-xl">Loading...</p></div>}>
+    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-violet-600 text-lg md:text-xl animate-bounce">Loading...</p></div>}>
       <Download searchParams={searchParams} />
     </Suspense>
   );
