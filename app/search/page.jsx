@@ -39,11 +39,9 @@ function Result() {
     {loading ? (
     <p className="text-violet-600 text-lg md:text-xl">Loading...</p>
       ) : m.length > 0 ? (m?.map((x, index) => ( 
-    <div key={index} className="border-2 border-violet-700 overflow-hidden h-26 flex flex-col relative cursor-pointer" onClick={() => changePage(x.id)}>
+    <div key={index} className="border-2 border-violet-700 overflow-hidden w-24 md:w-36 h-26 md:h-56 flex flex-col relative cursor-pointer" onClick={() => changePage(x.id)}>
     <div>
-    <Suspense fallback={<div className="flex h-full w-full items-center justify-center text-center"><p className="text-violet-600 text-lg md:text-xl">Loading Image...</p></div>}>
-    <Image src={x.image} alt="Anime pic" objectFit="cover" style={{ width: '100%', height: 'auto' }} />
-    </Suspense>
+    <Image src={x.image} alt="Anime pic" className="w-full h-full opacity-75 object-cover" />
     </div>
     <p className="ml-1 mr-1 text-base md:text-lg text-white text-center">{x.title}</p>
      </div>
