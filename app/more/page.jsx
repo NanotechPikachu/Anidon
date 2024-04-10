@@ -22,8 +22,8 @@ async function More() {
     {m ? (
     <>
     <div className="mt-20">
-    <div className="w-1/2 flex md:h-20 h-12 justify-center items-center">
-    <Image src={TRENDINGANIME} className="h-full w-full object-cover" />
+    <div className="w-full flex md:h-16 h-12 justify-center items-center">
+    <Image src={TRENDINGANIME} className="h-full w-1/2 object-contain" />
     </div>
     <div className="hide-scroll mt-6 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
     {m.map((x, index) => (
