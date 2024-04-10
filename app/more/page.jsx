@@ -26,7 +26,7 @@ async function More() {
     </div>
     <div className="hide-scroll mt-4 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
     {m.map((x, index) => (
-    <div className="relative w-24 md:w-48 h-full flex items-stretch" key={x?.title?.romaji}>
+    <div className="relative w-24 md:w-36 h-full flex items-stretch" key={x?.title?.romaji}>
     <Image src={x.image} alt="Anime pic" className="w-full h-full object-over opacity-75 border-2 border-violet-500" />
     </div>
     ))}
@@ -37,7 +37,7 @@ async function More() {
     </div>
     <div className="hide-scroll mt-4 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
     {n.map((x, index) => (
-    <div className="relative w-24 md:w-48 h-full flex items-stretch" key={x?.title?.romaji}>
+    <div className="relative w-24 md:w-36 h-full flex items-stretch" key={x?.title?.romaji}>
     <Image src={x.image} alt="Anime pic" className="w-full h-full object-over opacity-75 border-2 border-violet-500" />
     </div>
     ))}
