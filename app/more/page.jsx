@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { trending, popular } from '../functions/anilist.js';
 import Image from 'next/image';
+import TRENDINGANIME from "@/app/assets/TRENDINGANIME.png";
 
 async function More() {
   const data = await trending();
@@ -21,10 +22,10 @@ async function More() {
     {m ? (
     <>
     <div className="mt-20">
-    <div>
-    <h1 className="text-2xl text-center font-bold bg-opacity-50 backdrop-blur-sm bg-clip-text bg-gradient-to-r text-white from-slate-50 via-white/25 to-slate-50 animate-gloss">Trending</h1>
+    <div className="w-full flex md:h-20 h-12 justify-center items-center">
+    <Image src={TRENDINGANIME} className="h-full w-full object-cover" />
     </div>
-    <div className="hide-scroll mt-4 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
+    <div className="hide-scroll mt-6 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
     {m.map((x, index) => (
     <div className="relative w-24 md:w-36 h-full flex items-stretch" key={x?.title?.romaji}>
     <Image src={x.image} alt="Anime pic" className="w-full h-full object-over opacity-75 border-2 border-violet-500" />
@@ -35,7 +36,7 @@ async function More() {
     <div className="mt-16">
     <h1 className="text-2xl text-center font-bold bg-opacity-50 backdrop-blur-sm bg-clip-text bg-gradient-to-r text-white from-slate-50 via-white/25 to-slate-50 animate-gloss">Popular</h1>
     </div>
-    <div className="hide-scroll mt-4 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
+    <div className="hide-scroll mt-6 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
     {n.map((x, index) => (
     <div className="relative w-24 md:w-36 h-full flex items-stretch" key={x?.title?.romaji}>
     <Image src={x.image} alt="Anime pic" className="w-full h-full object-over opacity-75 border-2 border-violet-500" />
