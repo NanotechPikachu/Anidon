@@ -42,6 +42,7 @@ function Anime() {
         <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-lg md:text-xl text-violet-600 animate-bounce">Loading...</p></div>
       ) : m.title ? (
     <div>
+    <NavBar />
     <div className="mt-20 md:mt-24">
     <h1 className="text-2xl text-center md:text-3xl font-bold text-violet-900 hover:text-violet-400">{`${m.title?.replace('(Dub)', '')} (${m.subOrDub})`}</h1>
     </div>
