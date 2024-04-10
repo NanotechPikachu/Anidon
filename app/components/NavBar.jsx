@@ -22,7 +22,7 @@ function NavLinks({ toggleNavBar }) {
   )
 }
 
-export default function NavBar({ current }) {
+export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleNavBar() {
