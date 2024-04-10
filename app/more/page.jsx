@@ -19,7 +19,7 @@ async function More() {
     {m ? (
     <div className="border-violet-700 border-2 mt-20 bg-violet-600">
     <div>
-    <h1 className="text-2xl text-center font-bold bg-opacity-50 backdrop-blur-sm bg-clip-text bg-gradient-to-r text-orange-400 from-transparent via-white/25 to-transparent animate-gloss">Trending</h1>
+    <h1 className="text-2xl text-center font-bold bg-opacity-50 backdrop-blur-sm bg-clip-text bg-gradient-to-r text-orange-400 from-orange-400 via-orange-300/25 to-orange-400 animate-gloss">Trending</h1>
     </div>
     <div className="mt-4 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-0.5 overflow-x-auto h-36">
     {m.map((x, index) => (
