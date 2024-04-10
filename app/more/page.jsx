@@ -19,6 +19,7 @@ async function More() {
     <>
     <div className="ml-6 mr-6 mt-6 mb-20">
     {m ? (
+    <>
     <div className="mt-20">
     <div>
     <h1 className="text-2xl text-center font-bold bg-opacity-50 backdrop-blur-sm bg-clip-text bg-gradient-to-r text-white from-slate-50 via-white/25 to-slate-50 animate-gloss">Trending</h1>
@@ -41,6 +42,7 @@ async function More() {
     </div>
     ))}
     </div>
+    </>
     ) : (<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-orange-500 dark:text-orange-400 text-lg md:text-xl">No results Found!</p></div>)}
     </div>
     </>
