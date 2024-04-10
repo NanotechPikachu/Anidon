@@ -7,4 +7,9 @@ async function trending() {
   return result?.results;
 };
 
-export { trending }
+async function popular() {
+  const result = await anilist.fetchPopularAnime();
+  return result?.results;
+};
+
+export { trending, popular }
