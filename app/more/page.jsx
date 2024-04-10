@@ -34,7 +34,7 @@ async function More() {
     ))}
     </div>
     </div>
-    <div className="MT-16 w-full flex md:h-16 h-12 justify-center items-center">
+    <div className="mt-16 w-full flex md:h-16 h-12 justify-center items-center">
     <Image src={POPULARANIME2} className="h-full w-1/2 object-contain" />
     </div>
     <div className="hide-scroll mt-6 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
