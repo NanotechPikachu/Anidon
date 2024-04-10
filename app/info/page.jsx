@@ -53,17 +53,17 @@ function Anime() {
     </div>
     <br /> <br /> <br />
     <div className="w-full">
-    <h2 className="text-lg underline font-bold text-white">Description</h2>
-    <p className="text-sm text-slate-50">{m.description || 'No information'}</p>
-    <h2 className="text-lg mt-8 underline font-bold text-white">Status</h2>
-    <p className="text-sm text-slate-50">{m.status || 'No information'}</p>
-    <h2 className="text-lg mt-8 underline font-bold text-white">Genres</h2>
-    <p className="text-sm text-slate-50">{m.genres?.join(", ") || 'No information'}</p>
-    <h2 className="text-lg mt-8 underline font-bold text-white">Release</h2>
-    <p className="text-sm text-slate-50">{m.releaseDate || 'No information'}</p>
-    <h2 className="text-lg mt-8 underline font-bold text-white">Other Name(s)</h2>
-    <p className="text-sm text-slate-50">{m.otherName || 'No information'}</p>
-    <h2 className="text-lg mt-8 underline font-bold text-white">{`Episode(s) (${m.totalEpisodes})`}</h2>
+    <h2 className="text-lg md:text-xl underline font-bold text-white">Description</h2>
+    <p className="text-sm md:text-base text-slate-50">{m.description || 'No information'}</p>
+    <h2 className="text-lg md:text-xl mt-8 underline font-bold text-white">Status</h2>
+    <p className="text-sm md:text-base text-slate-50">{m.status || 'No information'}</p>
+    <h2 className="text-lg md:text-xl mt-8 underline font-bold text-white">Genres</h2>
+    <p className="text-sm md:text-base text-slate-50">{m.genres?.join(", ") || 'No information'}</p>
+    <h2 className="text-lg md:text-xl mt-8 underline font-bold text-white">Release</h2>
+    <p className="text-sm md:text-base text-slate-50">{m.releaseDate || 'No information'}</p>
+    <h2 className="text-lg md:text-xl mt-8 underline font-bold text-white">Other Name(s)</h2>
+    <p className="text-sm md:text-base text-slate-50">{m.otherName || 'No information'}</p>
+    <h2 className="text-lg md:text-xl mt-8 underline font-bold text-white">{`Episode(s) (${m.totalEpisodes})`}</h2>
     <div className="mt-2 flex flex-col md:grid md:grid-flow-row md:grid-cols-3 overflow-hidden md:gap-4">
   {l?.map((x, index) => (
     <div key={index} onClick={() => changePage(n[index], m.title, index + 1)}
