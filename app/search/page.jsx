@@ -37,10 +37,10 @@ function Result() {
     </div>
     <div className="mt-6 grid grid-flow-row grid-cols-3 overflow-hidden gap-4"> 
     {loading ? (
-    <p className="text-violet-600 text-lg md:text-xl">Loading...</p>
+    <p className="text-violet-600 text-lg md:text-xl animate-bounce">Loading...</p>
       ) : m.length > 0 ? (m?.map((x, index) => ( 
-    <div key={index} className="border-2 border-violet-700 overflow-hidden w-24 md:w-36 h-26 md:h-56 flex flex-col relative cursor-pointer" onClick={() => changePage(x.id)}>
-    <div>
+    <div key={index} className="border-2 border-violet-700 overflow-hidden flex flex-col relative cursor-pointer" onClick={() => changePage(x.id)}>
+    <div className="w-24 md:w-36 h-36 md:h-56">
     <Image src={x.image} alt="Anime pic" className="w-full h-full opacity-75 object-cover" />
     </div>
     <p className="ml-1 mr-1 text-base md:text-lg text-white text-center">{x.title}</p>
@@ -54,7 +54,7 @@ function Result() {
 
 export default function Res() {
   return (
-    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-violet-600 text-lg md:text-xl">Loading...</p></div>}>
+    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-violet-600 text-lg md:text-xl animate-bounce">Loading...</p></div>}>
       <Result />
     </Suspense>
   );
