@@ -25,3 +25,6 @@
   border-radius: 1px;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
