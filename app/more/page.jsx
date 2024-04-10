@@ -25,8 +25,8 @@ async function More() {
     </div>
     <div className="mt-4 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-0.5 overflow-x-auto h-36">
     {m.map((x, index) => (
-    <div className="border-2 border-violet-500 relative w-32 h-full flex items-stretch" key={x?.title?.romaji}>
-    <Image src={x.image} alt="Anime pic" className="w-full h-full object-contain opacity-50" />
+    <div className="relative w-32 h-full flex items-stretch" key={x?.title?.romaji}>
+    <Image src={x.image} alt="Anime pic" className="w-full h-full object-contain opacity-30 border-2 border-violet-500" />
     </div>
     ))}
     </div>
