@@ -55,7 +55,7 @@ async function More() {
 
 export default function Mre({ params, searchParams }) {
   return (
-    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-violet-600 text-lg md:text-xl">Loading...</p></div>}>
+    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-violet-600 text-lg md:text-xl animate-bounce">Loading...</p></div>}>
       <More />
     </Suspense>
   );
