@@ -30,10 +30,11 @@ function Result() {
   const m = data.results;
   return (
     <>
+    <NavBar />
     <div className="ml-6 mr-6 mb-20">
-    <div className="mt-20">
-    <h1 className="text-2xl text-center font-bold text-white">Search results...</h1>
-    <p className="text-center font-mono text-sm text-white"><i>Query: {anime}</i></p>
+    <div className="mt-20 md:mt-24">
+    <h1 className="md:text-3xl text-2xl text-center font-bold text-white">Search results...</h1>
+    <p className="text-center font-mono text-sm md:text-base text-slate-50"><i>Query: {anime}</i></p>
     </div>
     <div className="mt-6 grid grid-flow-row grid-cols-3 overflow-hidden gap-4 justify-center justify-items-center items-center"> 
     {loading ? (
