@@ -21,7 +21,7 @@ export default function Home() {
         src={SoloLevelingBG}
         alt="Solo Leveling Cover Pic BG"
         objectFit="cover"
-        className="absolute z-0 top-0 left-0 object-cover max-h-screen h-screen min-w-full max-w-full opacity-20"
+        className="absolute z-0 top-0 left-0 object-cover max-h-screen h-screen min-w-full max-w-full opacity-50"
       />
       <form
         className="mx-[10px] mt-[80px] flex flex-row gap-x-6 h-auto max-h-14 z-10"
