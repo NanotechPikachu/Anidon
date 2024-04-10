@@ -41,7 +41,6 @@ async function More() {
     </div>
     ))}
     </div>
-    </div>
     ) : (<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-orange-500 dark:text-orange-400 text-lg md:text-xl">No results Found!</p></div>)}
     </div>
     </>
