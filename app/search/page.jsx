@@ -39,11 +39,11 @@ function Result() {
     {loading ? (
     <p className="text-violet-600 text-lg md:text-xl animate-bounce">Loading...</p>
       ) : m.length > 0 ? (m?.map((x, index) => ( 
-    <div key={index} className="border-2 border-violet-700 overflow-hidden flex flex-col relative cursor-pointer" onClick={() => changePage(x.id)}>
+    <div key={index} className="border-2 border-violet-700 overflow-hidden flex flex-col relative cursor-pointer w-24 md:w-36 h-40 md:h-60" onClick={() => changePage(x.id)}>
     <div className="w-24 md:w-36 h-36 md:h-56">
-    <Image src={x.image} alt="Anime pic" className="w-full h-full opacity-75 object-cover" />
+    <Image src={x.image} alt="Anime pic" className="w-full h-full opacity-75 object-over" />
     </div>
-    <p className="ml-1 mr-1 text-base md:text-lg text-white text-center">{x.title}</p>
+    <p className="ml-1 mr-1 text-base text-white text-center">{x.title}</p>
      </div>
     ))) : (<p className="text-orange-500 dark:text-orange-400 text-lg md:text-xl">No results</p>)}
     </div>
