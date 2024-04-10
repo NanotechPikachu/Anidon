@@ -24,7 +24,7 @@ async function More() {
     <div className="mt-4 grid grid-flow-col max-w-screen grid-rows-1 gap-1 overflow-x-auto h-36">
     {m.map((x, index) => (
     <div className="w-32 h-full" key={x?.title?.romaji}>
-    <Image src={x.image} alt="Anime pic" objectFit="fill" />
+    <Image src={x.image} alt="Anime pic" objectFit="cover" />
     </div>
     ))}
     </div>
