@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
@@ -25,6 +25,10 @@ function NavLinks({ toggleNavBar }) {
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    document.body.classList.toggle('no-scroll', isOpen);
+  }, [isOpen]);
+
   function toggleNavBar() {
   setIsOpen(!isOpen);
 };
@@ -32,9 +36,9 @@ export default function NavBar() {
   return (
     <div>
     <div className="backdrop-blur fixed top-0 left-0 w-full flex items-center justify-between py-4 px-8 border-b border-primary-color shadow-md z-20">
-    <p className="font-bold text-left text-violet-800 hover:text-purple-400 text-xl md:text-2xl font-sans">
+    <Link href="/"><p className="font-bold text-left text-violet-800 hover:text-purple-400 text-xl md:text-2xl font-sans">
     Anidon
-    </p>
+    </p></Link>
     <div className={`fixed top-0 right-0 m-3 p-1 border-2 border-violet-900 hover:border-purple-500 ${isOpen ? 'hidden' : 'block'}`}
         onClick={toggleNavBar}>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 md:w-7 md:h-7">
