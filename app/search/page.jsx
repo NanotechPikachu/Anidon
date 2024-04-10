@@ -4,6 +4,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { useState, useEffect, Suspense } from 'react';
 import { search } from '../functions/gogo.js';
 import Image from 'next/image';
+import NavBar from "@/app/components/NavBar.jsx";
 
 function Result() {
   const [data, setData] = useState({ results: [] });
@@ -30,8 +31,8 @@ function Result() {
   const m = data.results;
   return (
     <>
-    <NavBar />
     <div className="ml-6 mr-6 mb-20">
+    <NavBar />
     <div className="mt-20 md:mt-24">
     <h1 className="md:text-3xl text-2xl text-center font-bold text-white">Search results...</h1>
     <p className="text-center font-mono text-sm md:text-base text-slate-50"><i>Query: {anime}</i></p>
