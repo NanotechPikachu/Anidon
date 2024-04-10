@@ -17,11 +17,11 @@ async function More() {
     <>
     <div className="ml-6 mr-6 mt-6 mb-20">
     {m ? (
+    <div className="mt-20 bg-violet-500">
     <div>
-    <div className="mt-20">
-    <h1 className="text-2xl text-center font-bold text-violet-900 hover:text-purple-400">Trending</h1>
+    <h1 className="text-2xl text-center font-bold text-orange-400">Trending</h1>
     </div>
-    <div className="mt-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-1 overflow-x-auto h-36">
+    <div className="mt-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-0.5 overflow-x-auto h-36">
     {m.map((x, index) => (
     <div className="relative w-32 h-full flex items-stretch" key={x?.title?.romaji}>
     <Image src={x.image} alt="Anime pic" className="w-full h-full object-contain" />
