@@ -38,18 +38,16 @@ function Anime() {
     <>
     <div className="ml-6 mr-6 mt-6 mb-20">
     {loading ? (
-        <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-lg md:text-xl text-violet-600">Loading...</p></div>
+        <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-lg md:text-xl text-violet-600 animate-bounce">Loading...</p></div>
       ) : m.title ? (
     <div>
     <div className="mt-20">
-    <h1 className="text-2xl text-center font-bold text-violet-900 hover:text-violet-400">{`${m.title?.replace('(Dub)', '')} (${m.subOrDub})`}</h1>
+    <h1 className="text-2xl text-center md:text-3xl font-bold text-violet-900 hover:text-violet-400">{`${m.title?.replace('(Dub)', '')} (${m.subOrDub})`}</h1>
     </div>
-    <div className="mt-4 flex justify-center items-center w-full bg-cover h-[252px] bg-no-repeat bg-center" style={{ backgroundImage: `url('${m.image}')`, height: "100%", width: "100%" }}>
+    <div className="mt-4 flex justify-center items-center w-full bg-cover h-[146px] md:h-[226] bg-no-repeat bg-center" style={{ backgroundImage: `url('${m.image}')`, height: "100%", width: "100%" }}>
     <div className="h-full w-full backdrop-blur-sm">
-    <div className="h-48 w-44">
-    <Suspense fallback={<div className="flex h-full w-full items-center justify-center text-center"><p className="text-violet-600 text-lg md:text-xl">Loading Image...</p></div>}>
-    <Image src={m.image} alt="Anime pic" width={224} height={250} objectFit="contain" style={{ float: 'left' }} />
-    </Suspense>
+    <div className="h-36 w-24 md:h-56 md:w-36">
+    <Image src={m.image} alt="Anime pic" className="h-full w-full object-contain" style={{ float: 'left' }} />
     </div>
     </div>
     </div>
@@ -83,7 +81,7 @@ function Anime() {
 
 export default function Info() {
   return (
-    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-lg md:text-xl text-violet-600">Loading...</p></div>}>
+    <Suspense fallback={<div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-lg md:text-xl text-violet-600 animate-bounce">Loading...</p></div>}>
       <Anime />
     </Suspense>
   );
