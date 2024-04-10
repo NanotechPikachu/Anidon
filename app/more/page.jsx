@@ -3,6 +3,7 @@ import { trending, popular } from '../functions/anilist.js';
 import Image from 'next/image';
 import TRENDINGANIME from "@/app/assets/TRENDINGANIME.png";
 import POPULARANIME2 from "@/app/assets/POPULARANIME2.png";
+import NavBar from "@/app/components/NavBar.jsx";
 
 async function More() {
   const data = await trending();
@@ -22,6 +23,7 @@ async function More() {
     <div className="ml-6 mr-6 mt-6 mb-20">
     {m ? (
     <>
+    <NavBar />
     <div className="mt-20">
     <div className="w-full flex md:h-16 h-12 justify-center items-center">
     <Image src={TRENDINGANIME} className="h-full w-1/2 object-contain" />
