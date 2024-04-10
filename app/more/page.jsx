@@ -26,7 +26,7 @@ async function More() {
     <NavBar />
     <div className="mt-20 md:mt-24">
     <div className="w-full flex md:h-16 h-12 justify-center items-center">
-    <Image src={TRENDINGANIME} className="h-full w-1/2 object-contain" />
+    <Image src={TRENDINGANIME} alt="Trending Anime" className="h-full w-1/2 object-contain" />
     </div>
     <div className="hover:small-scroll mt-6 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
     {m.map((x, index) => (
@@ -37,7 +37,7 @@ async function More() {
     </div>
     </div>
     <div className="mt-16 w-full flex md:h-16 h-12 justify-center items-center">
-    <Image src={POPULARANIME2} className="h-full w-1/2 object-contain" />
+    <Image src={POPULARANIME2} alt="Popular Anime" className="h-full w-1/2 object-contain" />
     </div>
     <div className="hover:small-scroll mt-6 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
     {n.map((x, index) => (
