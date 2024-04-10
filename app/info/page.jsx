@@ -4,6 +4,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { useState, useEffect, Suspense } from 'react';
 import { get } from '../functions/gogo.js';
 import Image from 'next/image';
+import NavBar from "@/app/components/NavBar.jsx";
 
 function Anime() {
   const [data, setData] = useState({});
@@ -41,7 +42,7 @@ function Anime() {
         <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-lg md:text-xl text-violet-600 animate-bounce">Loading...</p></div>
       ) : m.title ? (
     <div>
-    <div className="mt-20">
+    <div className="mt-20 md:mt-24">
     <h1 className="text-2xl text-center md:text-3xl font-bold text-violet-900 hover:text-violet-400">{`${m.title?.replace('(Dub)', '')} (${m.subOrDub})`}</h1>
     </div>
     <div className="mt-4 flex justify-center items-center w-full bg-cover h-[144px] md:h-[224] bg-no-repeat bg-center" style={{ backgroundImage: `url('${m.image}')`, height: "100%", width: "100%" }}>
