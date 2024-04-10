@@ -6,9 +6,19 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: 'media',
+  darkMode: 'media', // Enables dark mode based on media settings
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        gloss: {
+          'to': { backgroundPosition: '200% center' },
+        },
+      },
+      animation: {
+        gloss: 'gloss 3s linear infinite',
+      },
+    },
   },
   plugins: [],
 };
+
