@@ -32,7 +32,7 @@ export default function NavBar({ current }) {
   return (
     <div>
     <div className="backdrop-blur fixed top-0 left-0 w-full flex items-center justify-between py-4 px-8 border-b border-primary-color shadow-md z-20">
-    <p className="font-bold text-left text-sky-600 hover:text-amber-700 text-xl font-sans">
+    <p className="font-bold text-left text-violet-800 hover:text-purple-400 text-xl font-sans">
     Nanotech Wiki
     </p>
     <div className={`fixed top-0 right-0 m-3 p-1 border-2 hover:border-sky-400 ${isOpen ? 'hidden' : 'block'}`}
@@ -43,7 +43,7 @@ export default function NavBar({ current }) {
     </div>
     </div>
     <div
-        className={`fixed z-30 top-0 right-0 w-full h-full bg-black p-4 transform ${
+        className={`fixed z-30 top-0 right-0 w-full h-full min-h-screen overflow-y-auto hide-scroll bg-black p-4 transform ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } transition-transform duration-500 ease-in-out`}
       >
