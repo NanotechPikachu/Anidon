@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: 'gogocdn.net',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 's4.anilist.co',
+        pathname: '/**',
+      },
     ],
   },
 };
