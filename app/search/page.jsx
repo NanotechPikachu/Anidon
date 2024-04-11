@@ -40,7 +40,7 @@ function Result() {
             <i>Query: {anime}</i>
           </p>
         </div>
-        <div className="mt-6 grid grid-flow-row grid-cols-3 md:grid-cols-5 overflow-hidden gap-4 justify-center justify-items-center items-center">
+        <div className="mt-6 grid grid-flow-row grid-cols-2 md:grid-cols-5 overflow-hidden gap-x-2 gap-y-4 justify-center justify-items-center items-center">
           {loading ? (
             <p className="text-violet-600 text-lg md:text-xl animate-bounce">
               Loading...
