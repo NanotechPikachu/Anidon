@@ -42,11 +42,11 @@ function Result() {
       ) : m.length > 0 ? (m?.map((x, index) => ( 
     <div key={index} className="overflow-hidden flex flex-col cursor-pointer w-24 md:w-36 h-44 md:h-64 hide-scroll relative" onClick={() => changePage(x.id)}>
     <div className="absolute z-10 left-0.5 top-0.5 text-black bg-violet-500 text-xs rounded-md p-0.5">{x.subOrDub}</div>
-    <div className="w-24 md:w-36 h-36 md:h-56">
+    <div className="w-24 md:w-36 h-36 md:h-56 shadow-md">
     <img src={x.image} alt="Anime pic" className="w-full h-full opacity-75 object-cover"></img>
     </div>
-    <p className="text-xs md:text-sm md:text-base text-white text-center overflow-hidden truncate">{x.title}</p>
-     </div>
+    <p className="p-1 text-xs md:text-sm md:text-base text-white text-center overflow-hidden truncate">{x.title}</p>
+    </div>
     ))) : (<p className="text-orange-500 dark:text-orange-400 text-lg md:text-xl">No results</p>)}
     </div>
     </div>
