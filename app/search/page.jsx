@@ -36,7 +36,7 @@ function Result() {
     <h1 className="md:text-3xl text-2xl text-center font-bold text-white">Search results...</h1>
     <p className="text-center font-mono text-sm md:text-base text-slate-50"><i>Query: {anime}</i></p>
     </div>
-    <div className="mt-6 grid grid-flow-row grid-flow-col overflow-hidden gap-4 justify-center justify-items-center items-center"> 
+    <div className="mt-6 grid grid-flow-row grid-cols-3 md:grid-cols-5 overflow-hidden gap-4 justify-center justify-items-center items-center"> 
     {loading ? (
     <p className="text-violet-600 text-lg md:text-xl animate-bounce">Loading...</p>
       ) : m.length > 0 ? (m?.map((x, index) => ( 
