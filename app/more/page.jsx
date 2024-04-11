@@ -9,7 +9,7 @@ async function More() {
   const data = await trending();
   const dat = await popular();
 
-  if (data.length <= 0 || dat.length <= 0) {
+  if (data?.length <= 0 || dat?.length <= 0) {
     return (
       <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center"><p className="text-orange-500 dark:text-orange-400 text-lg md:text-xl">Something went wrong when fetching the information!</p></div>
     )
