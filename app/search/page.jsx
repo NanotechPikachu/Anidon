@@ -45,7 +45,7 @@ function Result() {
     <div className="w-24 md:w-36 h-36 md:h-56 shadow-md">
     <img src={x.image} alt="Anime pic" className="w-full h-full opacity-75 object-cover"></img>
     </div>
-    <p className="p-1 text-xs md:text-sm md:text-base text-white text-center overflow-hidden truncate">{x.title}</p>
+    <p className="p-1 text-xs md:text-sm text-white text-center overflow-hidden truncate">{x.title}</p>
     </div>
     ))) : (<p className="text-orange-500 dark:text-orange-400 text-lg md:text-xl">No results</p>)}
     </div>
