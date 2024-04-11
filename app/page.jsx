@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaAngleRight } from "react-icons/fa";
-import SoloLevelingBG from "@/app/assets/SoloLevelingBG.jpg";
+import Image from "next/image"
+import SoloLevelingBG from "@/app/assets/SoloLevelingBG.jpg"
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -16,12 +17,11 @@ export default function Home() {
 
   return (
     <div className="min-w-full min-h-screen flex justify-center p-16">
-      <img
+      <Image
         src={SoloLevelingBG}
         alt="Solo Leveling Cover Pic BG"
-        objectFit="cover"
         className="absolute z-0 top-0 left-0 object-cover max-h-screen h-screen min-w-full max-w-full opacity-50"
-      ></img>
+      />
       <form
         className="mx-[10px] mt-[80px] flex flex-row gap-x-6 h-auto max-h-14 z-10"
         onSubmit={handleSubmit}
