@@ -3,7 +3,6 @@
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useState, useEffect, Suspense } from 'react';
 import { get } from '../functions/gogo.js';
-import Image from 'next/image';
 import NavBar from "@/app/components/NavBar.jsx";
 
 function Anime() {
@@ -49,7 +48,7 @@ function Anime() {
     <div className="mt-4 flex justify-center items-center w-full bg-cover h-[144px] md:h-[224] bg-no-repeat bg-center" style={{ backgroundImage: `url('${m.image}')`, height: "100%", width: "100%" }}>
     <div className="h-full w-full backdrop-blur-sm">
     <div className="h-36 w-24 md:h-56 md:w-36">
-    <Image src={m.image} alt="Anime pic" className="h-full w-full object-contain" style={{ float: 'left' }} />
+    <img src={m.image} alt="Anime pic" className="h-full w-full object-contain" style={{ float: 'left' }}></img>
     </div>
     </div>
     </div>
