@@ -47,7 +47,7 @@ export default function NavBar() {
     </div>
     </div>
     <div
-        className={`fixed z-30 top-0 right-0 w-full h-full min-h-screen overflow-y-auto hide-scroll bg-black p-4 transform ${
+        className={`fixed z-30 top-0 right-0 w-full md:w-1/3 h-full min-h-screen overflow-y-auto hide-scroll bg-black p-4 transform ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } transition-transform duration-500 ease-in-out`}
       >
