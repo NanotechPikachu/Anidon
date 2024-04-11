@@ -1,6 +1,5 @@
 import { Suspense } from 'react';
 import { trending, popular } from '../functions/anilist.js';
-import Image from 'next/image';
 import TRENDINGANIME from "@/app/assets/TRENDINGANIME.png";
 import POPULARANIME2 from "@/app/assets/POPULARANIME2.png";
 import NavBar from "@/app/components/NavBar.jsx";
@@ -26,23 +25,23 @@ async function More() {
     <NavBar />
     <div className="mt-20 md:mt-24">
     <div className="w-full flex md:h-16 h-12 justify-center items-center">
-    <Image src={TRENDINGANIME} alt="Trending Anime" className="h-full w-1/2 object-contain" />
+    <img src={TRENDINGANIME} alt="Trending Anime" className="h-full w-1/2 object-contain"></img>
     </div>
     <div className="hover:small-scroll mt-6 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
     {m.map((x, index) => (
     <div className="relative w-24 md:w-36 h-full flex items-stretch" key={x?.title?.romaji}>
-    <Image src={x.image} alt="Anime pic" className="w-full h-full object-over opacity-75 border-2 border-violet-500" />
+    <img src={x.image} alt="Anime pic" className="w-full h-full object-over opacity-75 border-2 border-violet-500"></img>
     </div>
     ))}
     </div>
     </div>
     <div className="mt-16 w-full flex md:h-16 h-12 justify-center items-center">
-    <Image src={POPULARANIME2} alt="Popular Anime" className="h-full w-1/2 object-contain" />
+    <img src={POPULARANIME2} alt="Popular Anime" className="h-full w-1/2 object-contain"></img>
     </div>
     <div className="hover:small-scroll mt-6 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
     {n.map((x, index) => (
     <div className="relative w-24 md:w-36 h-full flex items-stretch" key={x?.title?.romaji}>
-    <Image src={x.image} alt="Anime pic" className="w-full h-full object-over opacity-75 border-2 border-violet-500" />
+    <img src={x.image} alt="Anime pic" className="w-full h-full object-over opacity-75 border-2 border-violet-500"></img>
     </div>
     ))}
     </div>
