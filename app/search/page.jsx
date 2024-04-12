@@ -40,7 +40,7 @@ function Result() {
             <i>Query: {anime}</i>
           </p>
         </div>
-        <div className="mt-6 flex flex-wrap overflow-hidden gap-6 justify-center justify-items-center items-center">
+        <div className="mt-6 flex flex-wrap overflow-hidden gap-3 md:gap-6 justify-center justify-items-center items-center">
           {loading ? (
             <p className="text-violet-600 text-lg md:text-xl animate-bounce">
               Loading...
