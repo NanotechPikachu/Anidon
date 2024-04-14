@@ -1,6 +1,6 @@
 query {
   Page(page: 1, perPage:20) {
-    media(isAdult: false, sort: TRENDING_DESC) {
+    media(isAdult: false, sort: TRENDING_DESC, type: ANIME) {
       id
       title {
         userPreferred
