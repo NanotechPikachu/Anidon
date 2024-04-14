@@ -40,7 +40,7 @@ function Result() {
             <i>Query: {anime}</i>
           </p>
         </div>
-        <div className="mt-6 flex flex-wrap overflow-hidden gap-3 md:gap-6 justify-center justify-items-center items-center">
+        <div className="mt-6 flex flex-wrap overflow-hidden gap-6 justify-center justify-items-center items-center">
           {loading ? (
             <p className="text-violet-600 text-lg md:text-xl animate-bounce">
               Loading...
@@ -55,7 +55,7 @@ function Result() {
                 <div className="absolute z-10 left-0 top-0 text-white font-bold bg-black bg-opacity-45 backdrop-blur-3xl text-xs rounded-br-lg px-2 py-1 shadow-2xl">
                   {x.subOrDub}
                 </div>
-                <div className="relative w-44 h-56">
+                <div className="relative sm:w-44 h-56 w-40">
                   <img
                     src={x.image}
                     alt="Anime pic"
