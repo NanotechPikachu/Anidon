@@ -6,6 +6,7 @@ import NavBar from "@/app/components/NavBar.jsx";
 
 async function More() {
   const data = await trending();
+  console.log(data)
   const dat = await popular();
 
   if (data?.length <= 0 || dat?.length <= 0) {
