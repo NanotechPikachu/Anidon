@@ -1,9 +1,6 @@
-import { META } from '@consumet/extensions';
 import fs from 'node:fs';
 import path from 'node:path';
 const url = 'https://graphql.anilist.co';
-
-const anilist = new META.Anilist();
 
 async function trending() {
   const p = path.resolve(process.cwd(), './app/functions/trendingAnime.graphql');
