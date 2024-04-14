@@ -78,10 +78,10 @@ async function More() {
               {o.map((x, index) => (
                 <div
                   className="relative w-24 md:w-36 h-full flex items-stretch"
-                  key={x?.title?.userPreferred}
+                  key={x?.media?.title?.userPreferred}
                 >
                   <img
-                    src={x?.coverImage?.large}
+                    src={x?.media?.coverImage?.large}
                     alt="Anime pic"
                     className="w-full h-full object-over opacity-75 border-2 border-violet-500"
                   />
