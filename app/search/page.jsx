@@ -49,7 +49,7 @@ function Result() {
             m?.map((x, index) => (
               <div
                 key={index}
-                className="overflow-hidden flex flex-col flex-shrink-0 cursor-pointer w-44 h-64 hide-scroll relative rounded-md"
+                className="overflow-hidden flex flex-col flex-shrink-0 cursor-pointer w-44 h-72 hide-scroll relative rounded-md"
                 onClick={() => changePage(x.id)}
               >
                 <div className="absolute z-10 left-0 top-0 text-white font-bold bg-black bg-opacity-45 backdrop-blur-3xl text-xs rounded-br-lg px-2 py-1 shadow-2xl">
@@ -65,6 +65,9 @@ function Result() {
                 </div>
                 <p className="p-1 text-xs md:text-sm text-white text-center overflow-hidden truncate">
                   {x.title}
+                </p>
+                <p className="p-1 text-xs md:text-sm text-white opacity-85 text-center overflow-hidden">
+                  {x.releaseDate}
                 </p>
               </div>
             ))
