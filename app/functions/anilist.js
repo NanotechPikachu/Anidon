@@ -48,7 +48,7 @@ async function latestRelease() {
     })
   }).then(res => res.json()).catch(err => console.error(err));
   console.log(JSON.stringify(d));
-  return d?.data?.Page?.airingSchedules;
+  return d?.data?.Page?.airingSchedules?.nodes;
 };
 
 export { trending, popular, latestRelease }
