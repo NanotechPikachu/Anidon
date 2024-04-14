@@ -15,7 +15,7 @@ async function trending() {
     body: JSON.stringify({
       query: query
     })
-  }).then(res => res.json).catch(err => console.error(err));
+  }).then(res => res.json()).catch(err => console.error(err));
   console.log(JSON.stringify(d));
   return d.data.Page.media;
 };
