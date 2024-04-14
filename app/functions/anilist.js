@@ -47,7 +47,6 @@ async function latestRelease() {
       query: query
     })
   }).then(res => res.json()).catch(err => console.error(err));
-  console.log(JSON.stringify(d));
   return d?.data?.Page?.airingSchedules;
 };
 
