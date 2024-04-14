@@ -8,7 +8,8 @@ const anilist = new META.Anilist();
 
 async function trending() {
   //const query = requireText('./trendingAnime.graphql', require);
-  const p = path.resolve('./trendingAnime.graphql');
+  const p = path.resolve(process.cwd(), './app/functions/trendingAnime.graphql');
+  console.log(p)
   const query = fs.readFileSync(p, 'utf-8');
   const d = await fetch(url, {
     method: 'POST',
