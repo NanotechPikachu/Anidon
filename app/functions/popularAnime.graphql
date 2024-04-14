@@ -1,0 +1,13 @@
+query {
+  Page(page: 1, perPage:20) {
+    media(isAdult: false, sort: POPULARITY_DESC, type: ANIME) {
+      id
+      title {
+        userPreferred
+      }
+      coverImage {
+        large
+      }
+    }
+  }
+}
