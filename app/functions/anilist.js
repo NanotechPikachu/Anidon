@@ -1,11 +1,15 @@
 import { META } from '@consumet/extensions';
-const { requireText } = './require-text.js';
+//const { requireText } = './require-text.js';
+import fs from 'node:fs';
+import path from 'node:path';
 const url = 'https://graphql.anilist.co';
 
 const anilist = new META.Anilist();
 
 async function trending() {
-  const query = requireText('./trendingAnime.graphql', require);
+  //const query = requireText('./trendingAnime.graphql', require);
+  const p = path.resolve('./trendingAnime.graphql');
+  const query = fs.readFileSync(p, 'utf-8');
   const d = await fetch(url, {
     method: 'POST',
     headers: {
