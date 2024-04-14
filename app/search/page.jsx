@@ -49,13 +49,13 @@ function Result() {
             m?.map((x, index) => (
               <div
                 key={index}
-                className="overflow-hidden flex flex-col flex-shrink-0 cursor-pointer w-44 h-72 hide-scroll relative rounded-md"
+                className="overflow-hidden flex flex-col flex-shrink-0 cursor-pointer sm:w-44 sm:h-64 h-56 w-36 hide-scroll relative rounded-md"
                 onClick={() => changePage(x.id)}
               >
                 <div className="absolute z-10 left-0 top-0 text-white font-bold bg-black bg-opacity-45 backdrop-blur-3xl text-xs rounded-br-lg px-2 py-1 shadow-2xl">
                   {x.subOrDub}
                 </div>
-                <div className="relative w-44 h-56">
+                <div className="relative sm:w-44 sm:h-56 h-48 w-36">
                   <img
                     src={x.image}
                     alt="Anime pic"
