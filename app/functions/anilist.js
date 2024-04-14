@@ -1,5 +1,5 @@
 import { META } from '@consumet/extensions';
-const requireText = './require-text.js';
+const { requireText } = './require-text.js';
 const url = 'https://graphql.anilist.co';
 
 const anilist = new META.Anilist();
