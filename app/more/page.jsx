@@ -6,7 +6,6 @@ import NavBar from "@/app/components/NavBar.jsx";
 
 async function More() {
   const data = await trending();
-  console.log(data)
   const dat = await popular();
 
   if (data?.length <= 0 || dat?.length <= 0) {
@@ -58,10 +57,10 @@ async function More() {
               {n.map((x, index) => (
                 <div
                   className="relative w-24 md:w-36 h-full flex items-stretch"
-                  key={x?.title?.romaji}
+                  key={x?.title?.userPreferred}
                 >
                   <img
-                    src={x.image}
+                    src={x?.coverImage?.large}
                     alt="Anime pic"
                     className="w-full h-full object-over opacity-75 border-2 border-violet-500"
                   />
