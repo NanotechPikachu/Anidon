@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { trending, popular } from "../functions/anilist.js";
+import { trending, popular, latestRelease } from "../functions/anilist.js";
 import TRENDINGANIME from "@/app/assets/TRENDINGANIME.png";
 import POPULARANIME2 from "@/app/assets/POPULARANIME2.png";
 import NavBar from "@/app/components/NavBar.jsx";
@@ -7,8 +7,9 @@ import NavBar from "@/app/components/NavBar.jsx";
 async function More() {
   const data = await trending();
   const dat = await popular();
+  const da = await latestRelease();
 
-  if (data?.length <= 0 || dat?.length <= 0) {
+  if ((data?.length <= 0 || dat?.length <= 0) || (da?.length <= 0)) {
     return (
       <div className="flex flex-grow w-full min-h-screen items-center justify-center text-center">
         <p className="text-orange-500 dark:text-orange-400 text-lg md:text-xl">
@@ -20,6 +21,7 @@ async function More() {
 
   const m = data;
   const n = dat;
+  const o = da;
 
   return (
     <>
@@ -55,6 +57,25 @@ async function More() {
             </div>
             <div className="hover:small-scroll mt-6 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
               {n.map((x, index) => (
+                <div
+                  className="relative w-24 md:w-36 h-full flex items-stretch"
+                  key={x?.title?.userPreferred}
+                >
+                  <img
+                    src={x?.coverImage?.large}
+                    alt="Anime pic"
+                    className="w-full h-full object-over opacity-75 border-2 border-violet-500"
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="mt-16 w-full flex md:h-16 h-12 justify-center items-center">
+              <p className="text-3xl bg-gradient-to-r from-violet-300 via-violet-400 to-violet-500 bg-clip-text text-transparent font-bold">
+                LATEST RELEASE
+              </p>
+            </div>
+            <div className="hover:small-scroll mt-6 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
+              {o.map((x, index) => (
                 <div
                   className="relative w-24 md:w-36 h-full flex items-stretch"
                   key={x?.title?.userPreferred}
