@@ -34,7 +34,6 @@ async function popular() {
       query: query
     })
   }).then(res => res.json()).catch(err => console.error(err));
-  console.log(d)
   return d.data.Page.media;
 };
 
