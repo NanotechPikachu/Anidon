@@ -33,20 +33,15 @@ async function More() {
                 <p className="text-3xl bg-gradient-to-r from-violet-300 via-violet-400 to-violet-500 bg-clip-text text-transparent font-bold">
                   TRENDING ANIME
                 </p>
-                {/* <img
-                  src={TRENDINGANIME}
-                  alt="Trending Anime"
-                  className="h-full w-1/2 object-contain"
-                /> */}
               </div>
               <div className="hover:small-scroll mt-6 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
                 {m.map((x, index) => (
                   <div
                     className="relative w-24 md:w-36 h-full flex items-stretch"
-                    key={x?.title?.romaji}
+                    key={x?.title?.userPreferred}
                   >
                     <img
-                      src={x.image}
+                      src={x?.coverImage?.large}
                       alt="Anime pic"
                       className="w-full h-full object-over opacity-75 border-2 border-violet-500"
                     />
@@ -58,11 +53,6 @@ async function More() {
               <p className="text-3xl bg-gradient-to-r from-violet-300 via-violet-400 to-violet-500 bg-clip-text text-transparent font-bold">
                 POPULAR ANIME
               </p>
-              {/* <img
-                src={POPULARANIME2}
-                alt="Popular Anime"
-                className="h-full w-1/2 object-contain"
-              /> */}
             </div>
             <div className="hover:small-scroll mt-6 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
               {n.map((x, index) => (
