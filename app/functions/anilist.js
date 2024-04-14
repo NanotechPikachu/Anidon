@@ -12,7 +12,7 @@ async function trending() {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
     },
-    body: JSON>stringify({
+    body: JSON.stringify({
       query: query
     })
   }).then(res => res.json).catch(err => console.error(err));
