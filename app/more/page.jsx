@@ -86,6 +86,9 @@ async function More() {
                     className="w-full h-full object-over opacity-75 border-2 border-violet-500"
                   />
                 </div>
+                <div className="absolute z-10 left-0 top-0 text-white font-bold bg-black bg-opacity-45 backdrop-blur-3xl text-xs rounded-br-lg px-2 py-1 shadow-2xl">
+                  {`EP: ${x?.episode}`}
+                </div>
               ))}
             </div>
           </>
