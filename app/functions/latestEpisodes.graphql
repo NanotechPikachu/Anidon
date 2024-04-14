@@ -1,19 +1,18 @@
 query {
   Page(page: 1, perPage: 10) {
     airingSchedules(sort: TIME_DESC, notYetAired: false) {
-      nodes {
-        media {
-          id
-          title {
-            userPreferred
-          }
-          coverImage {
-            large
-          }
+      media {
+        id
+        title {
+          userPreferred
         }
-        episode
-        airingAt
+        coverImage {
+          large
+        }
       }
+      episode
+      airingAt
     }
   }
 }
+
