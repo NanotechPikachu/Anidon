@@ -15,7 +15,7 @@ async function trending() {
       query: query
     })
   }).then(res => res.json()).catch(err => console.error(err));
-  return d.data.Page.media;
+  return d?.data?.Page?.media;
 };
 
 async function popular() {
@@ -31,7 +31,24 @@ async function popular() {
       query: query
     })
   }).then(res => res.json()).catch(err => console.error(err));
-  return d.data.Page.media;
+  return d?.data?.Page?.media;
 };
 
-export { trending, popular }
+async function latestRelease() {
+  const p = path.resolve(process.cwd(), './app/functions/latestEpisodes.graphql');
+  const query = fs.readFileSync(p, 'utf-8');
+  const d = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    },
+    body: JSON.stringify({
+      query: query
+    })
+  }).then(res => res.json()).catch(err => console.error(err));
+  console.log(JSON.stringify(d));
+  return d?.data?.Page?.airingSchedules;
+};
+
+export { trending, popular, latestRelease }
