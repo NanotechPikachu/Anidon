@@ -3,11 +3,16 @@ import { trending, popular, latestRelease } from "../functions/anilist.js";
 import TRENDINGANIME from "@/app/assets/TRENDINGANIME.png";
 import POPULARANIME2 from "@/app/assets/POPULARANIME2.png";
 import NavBar from "@/app/components/NavBar.jsx";
+import { FaAngleRight } from "react-icons/fa";
 
 async function More() {
   const data = await trending();
   const dat = await popular();
   const da = await latestRelease();
+
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
 
   if ((data?.length <= 0 || dat?.length <= 0) || (da?.length <= 0)) {
     return (
