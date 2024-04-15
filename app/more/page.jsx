@@ -1,8 +1,12 @@
 import { Suspense } from "react";
+import dynamic from 'next/dynamic';
 import { trending, popular, latestRelease } from "../functions/anilist.js";
 import TRENDINGANIME from "@/app/assets/TRENDINGANIME.png";
 import POPULARANIME2 from "@/app/assets/POPULARANIME2.png";
 import NavBar from "@/app/components/NavBar.jsx";
+const Search = dynamic(() => import('../components/Search.jsx'), {
+  ssr: false,
+});
 
 async function More() {
   const data = await trending();
@@ -26,6 +30,7 @@ async function More() {
 
   return (
     <>
+      <Search />
       <div className="ml-6 mr-6 mt-6 mb-20">
         {m ? (
           <>
