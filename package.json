@@ -19,6 +19,8 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
     "postcss": "^8",
     "tailwindcss": "^3.3.0"
   }
