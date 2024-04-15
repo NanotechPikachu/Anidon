@@ -17,7 +17,7 @@ const nextConfig = {
   webpack: (config, { isServer }) => {
     if (!isServer) {
       // Replace 'fs' module with an empty object on the client side to prevent errors
-      config.resolve.fallback = { fs: false };
+      config.resolve.fallback = { fs: false, path: false };
     }
     return config;
   },
