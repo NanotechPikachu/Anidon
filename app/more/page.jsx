@@ -1,3 +1,5 @@
+"use client";
+
 import { Suspense } from "react";
 import { trending, popular, latestRelease } from "../functions/anilist.js";
 import TRENDINGANIME from "@/app/assets/TRENDINGANIME.png";
