@@ -6,10 +6,22 @@ const Search = dynamic(() => import("../components/Search.jsx"), {
   ssr: false,
 });
 
-async function More() {
+export async function getStaticProps() {
   const data = await trending();
   const dat = await popular();
   const da = await latestRelease();
+  console.log("hi")
+  return {
+    props: {
+      data,
+      dat,
+      da,
+    },
+    revalidate: 60
+  }
+}
+
+async function More({ data, dat, da }) {
 
   if (data?.length <= 0 || dat?.length <= 0 || da?.length <= 0) {
     return (
@@ -132,7 +144,7 @@ async function More() {
   );
 }
 
-export default function Mre({ params, searchParams }) {
+export default function Mre({ data, dat, da }) {
   return (
     <Suspense
       fallback={
@@ -143,7 +155,7 @@ export default function Mre({ params, searchParams }) {
         </div>
       }
     >
-      <More />
+      <More data={data} dat={dat} da={da} />
     </Suspense>
   );
 }
