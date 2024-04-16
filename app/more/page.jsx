@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import { trending, popular, latestRelease } from "../functions/anilist.js";
+import { Refresh } from "../functions/Refresh.jsx";
 import NavBar from "@/app/components/NavBar.jsx";
 const Search = dynamic(() => import("../components/Search.jsx"), {
   ssr: false,
@@ -129,6 +130,7 @@ async function More() {
           </div>
         </>
       </div>
+      <Refresh />
     </>
   );
 }
