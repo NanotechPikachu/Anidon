@@ -8,6 +8,10 @@ query {
       coverImage {
         large
       }
+      startDate {
+        year
+      }
+      genres
     }
   }
 }
