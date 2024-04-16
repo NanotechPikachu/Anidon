@@ -8,8 +8,7 @@ export default function Search() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // Implement what should happen when the form is submitted
-    console.log(`Search for: ${searchTerm}`);
+    router.push(`search?anime=${encodeURIComponent(searchTerm)}`);
   }
 
   return (
