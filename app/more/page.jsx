@@ -100,23 +100,30 @@ async function More() {
               LATEST RELEASE
             </p>
           </div>
-          <div className="hover:small-scroll mt-6 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-36 md:h-56">
+          <div className="hover:small-scroll mt-6 mb-4 grid grid-flow-col auto-cols-max max-w-screen grid-rows-1 gap-3 md:gap-6 overflow-x-auto h-72">
             {o.map((x, index) => (
-              <>
-                <div
-                  className="relative w-24 md:w-36 h-full flex items-stretch"
-                  key={x?.media?.title?.userPreferred}
-                >
+              <div
+                className="overflow-hidden flex flex-col flex-shrink-0 cursor-pointer sm:w-44 h-72 w-36 hide-scroll relative rounded-md"
+                key={x?.media?.title?.userPreferred}
+              >
+                <div className="absolute z-10 left-0 top-0 text-white font-bold bg-black bg-opacity-45 backdrop-blur-3xl text-xs rounded-br-lg px-2 py-1 shadow-2xl">
+                  {`EP: ${x?.episode}`}
+                </div>
+                <div className="relative sm:w-44 sm:h-56 h-48 w-36">
                   <img
                     src={x?.media?.coverImage?.large}
                     alt="Anime pic"
-                    className="w-full h-full object-over opacity-75 border-2 border-violet-500"
+                    className="w-full h-full object-over opacity-90"
                   />
-                  <div className="absolute z-10 left-0 top-0 text-white font-bold bg-black bg-opacity-45 backdrop-blur-3xl text-xs rounded-br-lg px-2 py-1 shadow-2xl">
-                    {`EP: ${x?.episode}`}
-                  </div>
+                  <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-black z-10"></div>
                 </div>
-              </>
+                <p className="p-1 text-xs md:text-sm text-white text-center overflow-hidden truncate">
+                  {x?.media?.title?.userPreferred}
+                </p>
+                <p className="p-1 text-xs md:text-sm text-white opacity-85 text-center overflow-hidden">
+                  {x?.media?.startDate?.year}
+                </p>
+              </div>
             ))}
           </div>
         </>
