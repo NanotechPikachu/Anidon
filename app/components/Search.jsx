@@ -13,7 +13,7 @@ export default function Search() {
   }
 
   return (
-    <div className="min-w-full min-h-screen flex justify-center p-16">
+    <div className="flex justify-center px-16 pt-16">
       <form
         className="mx-[10px] mt-[80px] flex flex-row gap-x-6 h-auto max-h-14 z-10"
         onSubmit={handleSubmit}
