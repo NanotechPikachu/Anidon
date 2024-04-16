@@ -1,10 +1,12 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from 'react';
 import { FaAngleRight } from 'react-icons/fa';
 
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState('');
+  const router = useRouter();
 
   function handleSubmit(e) {
     e.preventDefault();
