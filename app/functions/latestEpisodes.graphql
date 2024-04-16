@@ -9,10 +9,12 @@ query {
         coverImage {
           large
         }
+        startDate {
+          year
+        }
       }
       episode
       airingAt
     }
   }
 }
-
