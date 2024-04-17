@@ -1,13 +1,12 @@
 "use client";
 
-import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+import { refresh } from './refresh-action.js';
 
 export function Refresh() {
-  const router = useRouter();
   useEffect(() => {
-    const timeout = setInterval(() => { router.refresh(); console.log("+") }, 60 * 1000);
-    return () => clearInterval(timeout);
+    const interval = setInterval(() => { refresh(); console.log("+") }, 60 * 1000);
+    return () => clearInterval(interval);
   }, []);
   return null;
 }
