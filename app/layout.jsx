@@ -6,6 +6,15 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Anidon",
   description: "Anime web",
+  openGraph: {
+    images: [
+      { 
+        url: 'https://i.imgur.com/r4Ot6St.jpeg',
+        height: 1800,
+        width: 1600
+      }
+    ]
+  }
 };
 
 export default function RootLayout({
