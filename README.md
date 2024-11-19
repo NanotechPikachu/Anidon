@@ -16,3 +16,7 @@ The aim of this platform isn't to spread anything but just for testing out my sk
 > [!IMPORTANT]
 > As none of the content here is hosted or owned by me, the DMCA complaints should be taken to appropriate hosters and not me. 
 > I use **consumet API** for scrapping and that too uses different sources for anime.
+
+### LICENSE
+
+> Anidon © 2024 by NanotechPikachu is licensed under Creative Commons Attribution-NonCommercial 4.0 International. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/
