@@ -4,7 +4,7 @@ This is a anime streaming and download platform developed by **NanotechPikachu**
 
 None of the content you see in this platform is owned and/or hosted by me. 
 
-The aim of this platform isn't to spread anything but just for testing out my skills as a programmer and **I do not endorse/support piracy for any illegal activity.**
+The aim of this platform isn't to spread anything but just for testing out my skills as a programmer and **I do not endorse/support piracy or any illegal activity.**
 
 > [!WARNING]
 > Usage of this code for commercial purposes is strictly prohibited and can cause the appropriate authorities to take action. 
