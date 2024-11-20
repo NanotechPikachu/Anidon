@@ -1,5 +1,5 @@
 
-export default async function handler(req, res) {
+export default async function OPTIONS(req, res) {
   const { videoUrl } = req.query;
 
   try {
