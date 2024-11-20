@@ -132,7 +132,7 @@ async function More() {
       </div>
       <Refresh />
 <video width={200} height={200} controls>
-<source src="https://ggredi.info/download.php?url=aHR0cHM6LyURASDGHUSRFSJGYfdsffsderFStewthsfSFtrfteAdrefsdsdfwerFrefdsfrersfdsrfer36343534sdf8xN2M3Y2Q0b2xkLmFuZjU5OC5jb20vdXNlcjEzNDIvNmQzM2FhNGRlOTg4YzBjMThhOWE4MjdmMjg3MGVkMDAvRVAuOS52MS4xNjM5MzI0NDg0LjM2MHAubXA0P3Rva2VuPVdHVTI1VmpPQUE0Rjc0YU9wM3A1WHcmZXhwaXJlcz0xNzMyMTEzNzc3JmlkPTc2ODEz" type="application/x-mpegURL" />
+<source src="https://www041.anzeat.pro/streamhls/f643f0c19d5bee9f1c3aed888eee75d6/ep.9.1709256905.360.m3u8" type="application/vnd.apple.mpegurl" />
 </video>
     </>
   );
