@@ -10,7 +10,7 @@ export default function DownloadPage() {
 
   const [progress, setProgress] = useState(0);
   useEffect(() => {
-    const eventSource = new EventSource(`/api/download?videoUrl=${videoUrl}`);
+    const eventSource = new EventSource(`/api/download?videoUrl=${encodeURIComponent(videoUrl)}`);
 
     eventSource.onmessage = (event) => {
       setProgress(parseInt(event.data));
