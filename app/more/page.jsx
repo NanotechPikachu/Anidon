@@ -6,7 +6,7 @@ import NavBar from "@/app/components/NavBar.jsx";
 const Search = dynamic(() => import("../components/Search.jsx"), {
   ssr: false,
 });
-const VideoPlayer = dynamic(() => import("../components/VideoPlayer.jsx"), { ssr: false });
+import VideoPlayer from "@/app/components/VideoPlayer.jsx";
 
 
 async function More() {
