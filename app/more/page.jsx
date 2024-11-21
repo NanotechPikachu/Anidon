@@ -6,6 +6,7 @@ import NavBar from "@/app/components/NavBar.jsx";
 const Search = dynamic(() => import("../components/Search.jsx"), {
   ssr: false,
 });
+const VideoPlayer = dynamic(() => import("../components/VideoPlayer.jsx"), { ssr: false });
 
 
 async function More() {
@@ -131,9 +132,12 @@ async function More() {
         </>
       </div>
       <Refresh />
+{/*
 <video width={200} height={200} controls>
 <source src="https://www041.anzeat.pro/streamhls/f643f0c19d5bee9f1c3aed888eee75d6/ep.9.1709256905.360.m3u8" type="application/vnd.apple.mpegurl" />
 </video>
+*/}
+<VideoPlayer src="https://www041.anzeat.pro/streamhls/f643f0c19d5bee9f1c3aed888eee75d6/ep.9.1709256905.360.m3u8" />
     </>
   );
 }
