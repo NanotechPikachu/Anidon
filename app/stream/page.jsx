@@ -12,7 +12,7 @@ export default async function Download({ searchParams }) {
 
   return (
     <>
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center mt-20 w-full md:mt-28">
     <video height={400} width={500} controls>
     <source src={link} type="application/x-mpegURL" />
     </video>
