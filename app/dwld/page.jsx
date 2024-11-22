@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { download, stream } from '../functions/gogo.js';
 import NavBar from "@/app/components/NavBar.jsx";
+import Link from 'next/link';
 
 async function Download({ searchParams }) {
   const params = searchParams;
@@ -42,13 +43,21 @@ async function Download({ searchParams }) {
     <div className="w-full mt-6">
     <h1 className="text-xl font-bold underline text-white">Stream Link(s)</h1>
     <div className="mt-2">
-    {y?.map((i) => (
+    {/*y?.map((i) => (
     <div key={i.quality} className="group border-2 border-violet-700 relative bg-black text-white hover:text-black transition duration-500 ease-in-out overflow-hidden cursor-pointer justify-center items-center flex">
     <a href={i.url} className="block w-full h-full">
     <div className="absolute inset-0 bg-violet-500 transition-transform duration-500 ease-in-out transform group-hover:translate-x-0 -translate-x-full"></div>
     <p className="relative p-2 cursor-pointer text-slate-50 transition-colors duration-500 ease-in-out group-hover:text-black w-full text-center">{i.quality}</p>
     </a>
     </div>
+    ))*/}
+    {m?.map((i) => ( 
+    <div key={i.source} className="group border-2 border-violet-700 relative bg-black text-white hover:text-black transition duration-500 ease-in-out overflow-hidden cursor-pointer justify-center items-center flex">
+    <Link href={`/stream?url=${i.link}` className="block w-full h-full">
+    <div className="absolute inset-0 bg-violet-500 transition-transform duration-500 ease-in-out transform group-hover:translate-x-0 -translate-x-full"></div>
+    <p className="relative p-2 cursor-pointer text-slate-50 transition-colors duration-500 ease-in-out group-hover:text-black w-full text-center">{i.source}</p>
+    </a>
+    </div> 
     ))}
     </div>
     </div>
