@@ -1,6 +1,6 @@
 export default async function Download({ searchParams }) {
   const params = searchParams;
-  const link = params?.link;
+  const link = params?.url;
   
   if (!link) {
     return (
