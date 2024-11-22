@@ -1,4 +1,4 @@
-export default async function Download({ searchParams }) {
+export default async function Stream({ searchParams }) {
   const params = searchParams;
   const link = params?.url;
   
