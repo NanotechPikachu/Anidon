@@ -53,7 +53,7 @@ async function Download({ searchParams }) {
     ))*/}
     {m?.map((i) => ( 
     <div key={i.source} className="group border-2 border-violet-700 relative bg-black text-white hover:text-black transition duration-500 ease-in-out overflow-hidden cursor-pointer justify-center items-center flex">
-    <Link href={`/stream?url=${i.link}`} className="block w-full h-full">
+    <Link href={`/stream?url=${i.link}`} className="block w-full h-full" />
     <div className="absolute inset-0 bg-violet-500 transition-transform duration-500 ease-in-out transform group-hover:translate-x-0 -translate-x-full"></div>
     <p className="relative p-2 cursor-pointer text-slate-50 transition-colors duration-500 ease-in-out group-hover:text-black w-full text-center">{i.source}</p>
     </a>
