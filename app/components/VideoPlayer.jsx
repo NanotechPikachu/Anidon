@@ -1,9 +1,8 @@
-import Player from 'next-video/player';
+'use client'
 
 function VideoPlayer({ src }) {
-
   return (
-    <Player src={src} width={640} height={360} controls />
+    <video src={src} width={640} height={360} controls />
   );
 }
 
