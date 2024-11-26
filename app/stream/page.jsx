@@ -1,3 +1,5 @@
+import VideoPlayer from "@/app/components/VideoPlayer.jsx";
+
 export default async function Stream({ searchParams }) {
   const params = searchParams;
   const link = params?.url;
@@ -13,9 +15,7 @@ export default async function Stream({ searchParams }) {
   return (
     <>
     <div className="flex justify-center items-center mt-20 w-full md:mt-28">
-    <video height={400} width={500} controls>
-    <source src={link} type="application/x-mpegURL" />
-    </video>
+    <VideoPlayer src={link} />
     </div>
     </>
   )
