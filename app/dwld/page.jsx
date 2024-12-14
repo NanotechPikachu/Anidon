@@ -3,6 +3,8 @@ import { download, stream } from '../functions/gogo.js';
 import NavBar from "@/app/components/NavBar.jsx";
 import Link from 'next/link';
 
+export const dynamic = 'force-dynamic';
+
 async function Download({ searchParams }) {
   const params = searchParams;
   const link = params?.link;
