@@ -1,6 +1,6 @@
 {
-  "name": "nextjs",
-  "version": "0.1.0",
+  "name": "Anidon",
+  "version": "0l1.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@consumet/extensions": "github:consumet/consumet.ts",
-    "next": "14.2.14",
+    "next": "14.2.19",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
