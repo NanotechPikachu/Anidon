@@ -20,3 +20,4 @@ The aim of this platform isn't to spread anything but just for testing out my sk
 ### LICENSE
 
 > Anidon © 2024 by NanotechPikachu is licensed under Creative Commons Attribution-NonCommercial 4.0 International. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/
+
