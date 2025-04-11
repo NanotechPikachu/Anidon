@@ -1,3 +1,6 @@
+> [!WARNING]
+> The website currently won't work correctly due to GogoAnime's CDN not working properly due to DMCA proceedings. 
+
 This is a anime streaming and download platform developed by **NanotechPikachu** and stylized by **Maghish**.
 
 ## IMPORTANT 
