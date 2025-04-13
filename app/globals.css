@@ -28,3 +28,7 @@
 .no-scroll {
   overflow: hidden;
 }
+
+.baka {
+  font-family: 'Courier New', Courier, monospace;
+}

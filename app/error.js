@@ -16,7 +16,7 @@ export default function Error({ error, reset }) {
  
   return (
     <>
-    <div className="flex flex-grow min-h-screen  w-full justify-center items-center flex-col">
+    <div className="flex flex-grow min-h-screen w-full justify-center items-center flex-col">
     <h2 className="text-lg md:text-2xl xl:text-3xl text-rose-700 font-bold">Uh Oh!</h2>
     <p className="text-base md:text-lg xl:text-xl text-rose-700 mt-2">Something went haywire!</p>
     <div className="flex flex-row w-full justify-center items-center gap-5 mt-6">
