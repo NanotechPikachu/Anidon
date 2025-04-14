@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 .hide-scroll {
   -ms-overflow-style: none;
@@ -29,6 +27,3 @@
   overflow: hidden;
 }
 
-.baka {
-  font-family: 'Courier New', Courier, monospace;
-}

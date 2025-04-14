@@ -27,7 +27,7 @@ export default function Home() {
         onSubmit={handleSubmit}
       >
         <input
-          className="w-fit sm:w-auto md:w-[450px] px-2 sm:px-4 py-2 sm:py-3 rounded-lg outline-none text-sm"
+          className="w-fit sm:w-auto md:w-[450px] bg-white px-2 sm:px-4 py-2 sm:py-3 rounded-lg outline-none text-sm"
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
