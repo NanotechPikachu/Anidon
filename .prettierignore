@@ -1,0 +1,8 @@
+.next
+.git
+node_modules
+jsconfig.json
+package-lock.json
+package.json
+README.md
+favicon.ico
