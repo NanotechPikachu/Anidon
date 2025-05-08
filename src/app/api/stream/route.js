@@ -18,12 +18,12 @@ export async function GET(request) {
         quality: $(el).text(),
         audio: $(el).attr('data-audio'),
     }));
-
+/*
     const downloads = $('div#pickDownload > a').map((i, el) => ({
         url: $(el).attr('href'),
          quality: $(el).text(),
     })).get(); console.log(downloads);
-
+*/
     const sources = [];
 
     for (const link of links) {

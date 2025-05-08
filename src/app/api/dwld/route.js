@@ -48,7 +48,7 @@ export async function GET(request) {
                 auth: kwikAuth,
                 content: { kwik }
             })
-        }).then(res => res.json());
+        }).then(res => { console.log(res); res.json() });
         dlLinks.push({
             url: res?.content?.url,
             quality: d?.quality,
