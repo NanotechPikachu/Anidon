@@ -36,24 +36,6 @@ export async function GET(request) {
         });
     };
 
-    const dlLinks = [];
-
-    for (const d of downloadLinks) {
-        const kwik = d?.url;
-        const res = await fetch(kwikExtract, {
-            method: 'POST',
-            body: JSON.stringify({
-                service: 'kwik',
-                action: 'fetch',
-                auth: kwikAuth,
-                content: { kwik }
-            })
-        }).then(res => { console.log(res); res.json() });
-        dlLinks.push({
-            url: res?.content?.url,
-            quality: d?.quality,
-        });
-    };
-
-    return NextResponse.json({ downloadLinks, dlLinks }, { status: 200 });
+    
+    return NextResponse.json({ downloadLinks }, { status: 200 });
 }
