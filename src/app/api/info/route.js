@@ -12,6 +12,10 @@ export async function GET(request) {
 
   const $ = cheerio.load(page);
   const title = $("h1 > span").text();
+
+  if (!title)
+    return NextResponse.json({ error: "Anime not found" }, { status: 404 });
+
   const synopsis = $(".anime-synopsis")?.text() || "N/A";
   let info = {};
   info.genres = $("div.anime-genre ul li")

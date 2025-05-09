@@ -20,6 +20,9 @@ export async function GET(request) {
     }))
     .get();
 
+  if (downloads?.length === 0)
+    return NextResponse.json({ error: "No downloads found" }, { status: 404 });
+
   const downloadLinks = [];
 
   for (const d of downloads) {
@@ -42,6 +45,9 @@ export async function GET(request) {
       quality: d?.quality,
     });
   }
+
+  if (downloadLinks?.length === 0)
+    return NextResponse.json({ error: "No downloads found" }, { status: 404 });
 
   return NextResponse.json({ downloadLinks }, { status: 200 });
 }

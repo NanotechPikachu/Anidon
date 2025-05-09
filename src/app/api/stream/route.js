@@ -18,12 +18,10 @@ export async function GET(request) {
     quality: $(el).text(),
     audio: $(el).attr("data-audio"),
   }));
-  /*
-    const downloads = $('div#pickDownload > a').map((i, el) => ({
-        url: $(el).attr('href'),
-         quality: $(el).text(),
-    })).get(); console.log(downloads);
-*/
+
+  if (links?.length === 0)
+    return NextResponse.json({ error: "No sources found" }, { status: 404 });
+
   const sources = [];
 
   for (const link of links) {
