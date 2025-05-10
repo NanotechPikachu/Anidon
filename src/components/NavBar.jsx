@@ -52,7 +52,7 @@ export default function NavBar() {
       </div>
       {isOpen ? (
         <div className="w-full h-30 bg-blue-900 transition ease-in-out transition-transform translate-y-3 duration-300 lg:hidden">
-          <form className="ml-6 mr-6 p-16">
+          <form className="ml-6 mr-6 p-16" onSubmit={(e) => handleSubmit(e)}>
             <input
               type="text"
               className="bg-gray-200 text-gray-900 rounded-lg p-2 w-full mr-2"
