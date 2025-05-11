@@ -17,6 +17,7 @@ export async function GET(request) {
     return NextResponse.json({ error: "Anime not found" }, { status: 404 });
 
   const synopsis = $(".anime-synopsis")?.text() || "N/A";
+  const cover = $("div.anime-poster > a").attr("href");
   let info = {};
   info.genres = $("div.anime-genre ul li")
     .map((i, el) => $(el).find("a").attr("title"))
@@ -46,7 +47,7 @@ export async function GET(request) {
   ).then((res) => res.json());
 
   return NextResponse.json(
-    { title, synopsis, info, episodeData },
+    { title, cover, synopsis, info, episodeData },
     { status: 200 },
   );
 }
