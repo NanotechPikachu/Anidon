@@ -35,16 +35,26 @@ export default function Info({ params }) {
   }
 
   return (
-  <div className="mt-20 mr-4 ml-4">
-    <div className="flex w-full flex-row items-center justify-between h-80">
+    <div className="mt-20 mr-4 ml-4">
+      <div className="flex w-full flex-row items-center justify-between h-80">
         <div className="w-1/4 h-60">
-    <Image src={animeInfo?.cover || null} alt={animeInfo?.title} className="w-full h-full" width={100} height={100} />
-    </div>
-    <div className="flex flex-col justify-center text-left gap-3 mr-5 ml-20">
-        <p className="text-left text-2xl font-bold truncate w-4/7 lg:w-4/5 overflow-hidden">{animeInfo?.title}</p>
-        <p className="text-left text-sm lg:text-base">{animeInfo?.info?.studio?.join(", ") || "N/A"}</p>
+          <Image
+            src={animeInfo?.cover || null}
+            alt={animeInfo?.title}
+            className="w-full h-full"
+            width={100}
+            height={100}
+          />
         </div>
+        <div className="flex flex-col justify-center text-left gap-3 mr-5 ml-20">
+          <p className="text-left text-2xl font-bold truncate w-4/7 lg:w-4/5 overflow-hidden">
+            {animeInfo?.title}
+          </p>
+          <p className="text-left text-sm lg:text-base">
+            {animeInfo?.info?.studio?.join(", ") || "N/A"}
+          </p>
+        </div>
+      </div>
     </div>
-    </div>
-)
+  );
 }
