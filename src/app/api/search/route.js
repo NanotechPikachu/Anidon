@@ -20,6 +20,6 @@ export async function GET(request) {
   }
   if (dataSheet?.total === 0)
     return NextResponse.json({ message: "Anime Not Found" }, { status: 404 });
-  //console.log(dataSheet);
+
   return NextResponse.json({ dataSheet }, { status: 200 });
 }
