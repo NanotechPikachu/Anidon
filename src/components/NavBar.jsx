@@ -24,6 +24,7 @@ export default function NavBar() {
     e?.preventDefault();
     if (!searchItem?.trim()) return;
     router.push(`/search/${encodeURIComponent(searchItem)}`);
+    setIsOpen(false);
   };
 
   return (

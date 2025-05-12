@@ -1,8 +1,8 @@
 "use client";
 
-import { SkeletonSearch } from "@/components/Skeleton";
+import { Card, CardFooter, Skeleton } from "@heroui/react";
 import Image from "next/image";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { use, useEffect, useState } from "react";
 
 export default function SearchAnime({ params }) {
@@ -11,12 +11,15 @@ export default function SearchAnime({ params }) {
   const [animeData, setAnimeData] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const router = useRouter();
+
   useEffect(() => {
     if (!anime?.trim()) return;
     (async () => {
       const res = await fetch(`/api/search?anime=${encodeURIComponent(anime)}`);
       if (res.status === 404) {
         setAnimeData({ error: "Anime Not Found" });
+        setLoading(false);
         return;
       } else {
         const data = await res?.json();
@@ -28,16 +31,92 @@ export default function SearchAnime({ params }) {
 
   const pushToInfo = (animeId) => {
     if (!animeId?.trim()) return;
-    redirect(`/info/${animeId}`);
+    router.push(`/info/${animeId}`);
   };
 
   if (loading) {
     return (
-      <div className="mt-20 mr-4 ml-4">
-        <SkeletonSearch />
-        <SkeletonSearch />
-        <SkeletonSearch />
-        <SkeletonSearch />
+      <div className="mt-16 mr-4 ml-4 p-4 grid grid-flow-row auto-rows-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
+        <Card className="w-full space-y-5 p-6" radius="lg">
+          <Skeleton className="rounded-lg">
+            <div className="h-70 md:h-90 w-3/4 rounded-lg bg-default-300" />
+          </Skeleton>
+          <div className="space-y-3">
+            <Skeleton className="w-full rounded-lg">
+              <div className="h-3 w-full rounded-lg bg-default-200" />
+            </Skeleton>
+          </div>
+        </Card>
+        <Card className="w-full space-y-5 p-6" radius="lg">
+          <Skeleton className="rounded-lg">
+            <div className="h-70 md:h-90 w-3/4 rounded-lg bg-default-300" />
+          </Skeleton>
+          <div className="space-y-3">
+            <Skeleton className="w-full rounded-lg">
+              <div className="h-3 w-full rounded-lg bg-default-200" />
+            </Skeleton>
+          </div>
+        </Card>
+        <Card className="w-full space-y-5 p-6" radius="lg">
+          <Skeleton className="rounded-lg">
+            <div className="h-70 md:h-90 w-3/4 rounded-lg bg-default-300" />
+          </Skeleton>
+          <div className="space-y-3">
+            <Skeleton className="w-full rounded-lg">
+              <div className="h-3 w-full rounded-lg bg-default-200" />
+            </Skeleton>
+          </div>
+        </Card>
+        <Card className="w-full space-y-5 p-6" radius="lg">
+          <Skeleton className="rounded-lg">
+            <div className="h-70 md:h-90 w-3/4 rounded-lg bg-default-300" />
+          </Skeleton>
+          <div className="space-y-3">
+            <Skeleton className="w-full rounded-lg">
+              <div className="h-3 w-full rounded-lg bg-default-200" />
+            </Skeleton>
+          </div>
+        </Card>
+        <Card className="w-full space-y-5 p-6" radius="lg">
+          <Skeleton className="rounded-lg">
+            <div className="h-70 md:h-90 w-3/4 rounded-lg bg-default-300" />
+          </Skeleton>
+          <div className="space-y-3">
+            <Skeleton className="w-full rounded-lg">
+              <div className="h-3 w-full rounded-lg bg-default-200" />
+            </Skeleton>
+          </div>
+        </Card>
+        <Card className="w-full space-y-5 p-6" radius="lg">
+          <Skeleton className="rounded-lg">
+            <div className="h-70 md:h-90 w-3/4 rounded-lg bg-default-300" />
+          </Skeleton>
+          <div className="space-y-3">
+            <Skeleton className="w-full rounded-lg">
+              <div className="h-3 w-full rounded-lg bg-default-200" />
+            </Skeleton>
+          </div>
+        </Card>
+        <Card className="w-full space-y-5 p-6" radius="lg">
+          <Skeleton className="rounded-lg">
+            <div className="h-70 md:h-90 w-3/4 rounded-lg bg-default-300" />
+          </Skeleton>
+          <div className="space-y-3">
+            <Skeleton className="w-full rounded-lg">
+              <div className="h-3 w-full rounded-lg bg-default-200" />
+            </Skeleton>
+          </div>
+        </Card>
+        <Card className="w-full space-y-5 p-6" radius="lg">
+          <Skeleton className="rounded-lg">
+            <div className="h-70 md:h-90 w-3/4 rounded-lg bg-default-300" />
+          </Skeleton>
+          <div className="space-y-3">
+            <Skeleton className="w-full rounded-lg">
+              <div className="h-3 w-full rounded-lg bg-default-200" />
+            </Skeleton>
+          </div>
+        </Card>
       </div>
     );
   }
@@ -51,52 +130,30 @@ export default function SearchAnime({ params }) {
   }
 
   return (
-    <div className="mt-20 mr-4 ml-4">
+    <div className="mt-16 mr-4 ml-4 p-4 grid grid-flow-row auto-rows-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
       {animeData?.map((anime) => (
-        <div
+        <Card
+          isFooterBlurred
+          className="border-none"
+          radius="lg"
           key={anime?.id}
-          className="flex w-full flex-col items-center justify-center cursor-pointer"
-          onClick={() => pushToInfo(anime?.session)}
+          isPressable
+          shadow="sm"
+          onPress={() => pushToInfo(anime?.session)}
         >
-          <div className="w-full border-2 border-blue-800 rounded-lg p-4 mb-4 flex flex-row gap-4 xs:gap-2 hover:border-blue-500">
-            <div>
-              <Image
-                src={anime?.poster || null}
-                alt={anime?.title}
-                className="w-full h-full"
-                width={100}
-                height={100}
-              />
-            </div>
-            <div className="flex flex-col items-center justify-center w-full gap-3 xs:gap-2">
-              <p className="text-center text-xl md:text-2xl xs:text-base font-bold truncate overflow-hidden xs:w-50 w-60 sm:w-80 md:w-100 lg:w-full">
-                {anime?.title}
-              </p>
-              <div className="flex flex-row items-center justify-between w-full gap-3 xs:gap-2 pl-3 pr-3 pt-2 lg:pl-10 lg:pr-10 lg:pt-5">
-                <div className="flex flex-col items-center justify-center gap-1 lg:gap-2">
-                  <p className="text-center xs:text-xs sm:text-sm md:text-base">
-                    <span className="font-bold">Status: </span>
-                    {anime?.status}
-                  </p>
-                  <p className="text-center xs:text-xs sm:text-sm md:text-base">
-                    <span className="font-bold">Type: </span>
-                    {anime?.type}
-                  </p>
-                </div>
-                <div className="flex flex-col items-center justify-center lg:gap-2">
-                  <p className="text-center xs:text-xs sm:text-sm md:text-base">
-                    <span className="font-bold">Episodes: </span>
-                    {anime?.episodes}
-                  </p>
-                  <p className="text-center xs:text-xs sm:text-sm md:text-base">
-                    <span className="font-bold">Score: </span>
-                    {anime?.score}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <Image
+            alt={anime?.title}
+            height={200}
+            width={200}
+            src={anime?.poster}
+            className="w-full h-90 sm:h-full"
+          />
+          <CardFooter className="justify-center before:bg-white/10 border-blue-800/20 border-2 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+            <p className="text-sm text-white/80 hover:text-blue-600/70">
+              {anime?.title}
+            </p>
+          </CardFooter>
+        </Card>
       ))}
     </div>
   );
