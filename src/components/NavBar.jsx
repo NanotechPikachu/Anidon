@@ -29,7 +29,8 @@ export default function NavBar() {
 
   return (
     <Navbar
-      onMenuOpenChange={setIsOpen}
+      isMenuOpen={isOpen}
+      onMenuOpenChange={(open) => setIsOpen(open)}
       maxWidth="full"
       className="bg-slate-900"
     >
