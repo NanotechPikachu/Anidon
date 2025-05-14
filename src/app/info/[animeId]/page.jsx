@@ -14,7 +14,7 @@ export default function Info({ params }) {
     if (!animeId?.trim()) return;
     (async () => {
       const res = await fetch(
-        `/api/info?animeId=${encodeURIComponent(animeId)}`,
+        `/api/info?animeId=${encodeURIComponent(animeId)}`
       );
       if (res.status === 404) {
         setAnimeInfo({ error: "Anime Not Found" });
@@ -44,22 +44,23 @@ export default function Info({ params }) {
   }
 
   return (
-    <div className="mt-10 mr-4 ml-4">
+    <div className="absolute bottom-0 left-0 pb-24 md:mt-10 md:pb-0 md:static md:top-0 mr-4 ml-4">
       <div className="flex flex-col md:flex-row justify-between gap-5">
         <div className="flex justify-center md:justify-between items-center">
           <Card
             isFooterBlurred
             shadow="none"
             radius="lg"
-            className="w-40 sm:w-45 sm:h-70 md:w-50 md:h-75 lg:w-60 lg:h-85 h-60 bg-transparent"
+            className="fixed top-0 left-0 w-full h-full md:static sm:w-45 sm:h-70 md:w-50 md:h-75 lg:w-60 lg:h-85 bg-transparent"
           >
+            <div className="absolute top-0 left-0 w-full h-full bg-black/70 backdrop-blur-xs visible md:hidden" />
             <CardBody>
               <Image
                 src={animeInfo?.cover}
                 height={200}
                 width={100}
                 alt={animeInfo?.title}
-                className="w-full h-full"
+                className="w-full h-full -z-10 md:z-0"
               />
             </CardBody>
             <CardFooter className="justify-between before:bg-white/10 border-white/20 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-3 w-auto shadow-small mx-3 z-10">
@@ -69,42 +70,44 @@ export default function Info({ params }) {
             </CardFooter>
           </Card>
         </div>
-        <div className="w-full mt-7">
-          <div className="flex flex-row gap-2 justify-center md:justify-start items-center">
-            <p className="text-lg md:text-xl md:text-left text-center lg:text-2xl md:max-w-1/2 lg:max-w-full">
-              {animeInfo?.title}
+        <div className="z-10 flex-col md:flex-row justify-between gap-5 min-h-[250px] max-h-[250px] overflow-auto">
+          <div className="w-full mt-7 z-10">
+            <div className="flex flex-row gap-2 justify-center md:justify-start items-center">
+              <p className="text-lg md:text-xl md:text-left text-center lg:text-2xl md:max-w-1/2 lg:max-w-full">
+                {animeInfo?.title}
+              </p>
+              <p className="mt-0.5">
+                <Chip color="warning" variant="bordered" className="ml-2 mt-0">
+                  {animeInfo?.info.status}
+                </Chip>
+              </p>
+            </div>
+            <p className="text-base md:text-lg md:text-left text-center lg:text-xl mt-2 text-white/60">
+              {animeInfo?.info?.studio?.join(", ")}
             </p>
-            <p className="mt-0.5">
-              <Chip color="warning" variant="bordered" className="ml-2 mt-0">
-                {animeInfo?.info.status}
-              </Chip>
+            <p className="text-base md:text-lg text-left lg:text-xl mt-3 text-white/80">
+              <span className="font-bold text-blue-700/70">Genres: </span>
+              {animeInfo?.info?.genres?.join(", ")}
+            </p>
+            <p className="text-base md:text-lg text-left lg:text-xl mt-3 text-white/80">
+              <span className="font-bold text-blue-700/70">Release: </span>
+              {animeInfo?.info?.releaseDate}
+            </p>
+            <p className="text-base md:text-lg text-left lg:text-xl mt-3 text-white/80">
+              <span className="font-bold text-blue-700/70">Episodes: </span>
+              {animeInfo?.info?.episodes}
             </p>
           </div>
-          <p className="text-base md:text-lg md:text-left text-center lg:text-xl mt-2 text-white/60">
-            {animeInfo?.info?.studio?.join(", ")}
-          </p>
-          <p className="text-base md:text-lg text-left lg:text-xl mt-3 text-white/80">
-            <span className="font-bold text-blue-700/70">Genres: </span>
-            {animeInfo?.info?.genres?.join(", ")}
-          </p>
-          <p className="text-base md:text-lg text-left lg:text-xl mt-3 text-white/80">
-            <span className="font-bold text-blue-700/70">Release: </span>
-            {animeInfo?.info?.releaseDate}
-          </p>
-          <p className="text-base md:text-lg text-left lg:text-xl mt-3 text-white/80">
-            <span className="font-bold text-blue-700/70">Episodes: </span>
-            {animeInfo?.info?.episodes}
-          </p>
+          <Divider className="my-6 z-10" />
+          <div className="md:ml-3 z-10">
+            <h2 className="text-lg md:text-xl font-bold text-blue-700/70 text-left lg:text-2xl">
+              Synopsis
+            </h2>
+            <p className="text-justify text-base md:text-lg mt-3 text-white/80">
+              {animeInfo?.synopsis}
+            </p>
+          </div>
         </div>
-      </div>
-      <Divider className="my-6" />
-      <div className="md:ml-3">
-        <h2 className="text-lg md:text-xl font-bold text-blue-700/70 text-left lg:text-2xl">
-          Synopsis
-        </h2>
-        <p className="text-justify text-base md:text-lg mt-3 text-white/80">
-          {animeInfo?.synopsis}
-        </p>
       </div>
     </div>
   );
