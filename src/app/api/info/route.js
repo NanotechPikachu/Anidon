@@ -38,8 +38,5 @@ export async function GET(request) {
     .replace("Episodes:", "")
     .trim();
 
-  return NextResponse.json(
-    { title, cover, synopsis, info },
-    { status: 200 },
-  );
+  return NextResponse.json({ title, cover, synopsis, info }, { status: 200 });
 }

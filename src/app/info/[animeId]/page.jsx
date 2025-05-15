@@ -38,9 +38,7 @@ export default function Info({ params }) {
   }
 
   if (loading) {
-    return (
-      <InfoSkeleton />
-    );
+    return <InfoSkeleton />;
   }
 
   return (

@@ -13,10 +13,8 @@ export async function GET(request) {
     },
   ).then((res) => res.json());
 
-  if (!episodeData?.total) return NextResponse.json( { error: 'No episodes found!' }, { status:404 });
+  if (!episodeData?.total)
+    return NextResponse.json({ error: "No episodes found!" }, { status: 404 });
 
-  return NextResponse.json(
-    { episodeData },
-    { status: 200 },
-  );
+  return NextResponse.json({ episodeData }, { status: 200 });
 }
