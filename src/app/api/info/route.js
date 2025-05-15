@@ -5,7 +5,6 @@ import { NextResponse } from "next/server";
 export async function GET(request) {
   const url = new URL(request.url);
   const animeId = url?.searchParams?.get("animeId");
-  const pageNo = url?.searchParams?.get("page") || 1;
   const page = await fetch(`${animepaheUrl}/anime/${animeId}`, {
     headers: headers,
   }).then((res) => res.text());
@@ -39,15 +38,8 @@ export async function GET(request) {
     .replace("Episodes:", "")
     .trim();
 
-  const episodeData = await fetch(
-    `${animepaheUrl}/api?m=release&id=${animeId}&sort=episode_asc&page=${pageNo}`,
-    {
-      headers: headers,
-    },
-  ).then((res) => res.json());
-
   return NextResponse.json(
-    { title, cover, synopsis, info, episodeData },
+    { title, cover, synopsis, info },
     { status: 200 },
   );
 }

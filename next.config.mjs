@@ -6,7 +6,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "i.animepahe.ru",
         port: "",
-        pathname: "/posters/**",
+        pathname: "/**/**",
       },
     ],
   },

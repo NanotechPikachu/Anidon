@@ -1,5 +1,7 @@
 "use client";
 
+import Episodes from "@/components/Episodes";
+import { InfoSkeleton } from "@/components/Skeletons";
 import { Card, CardBody, CardFooter, Chip, Divider } from "@heroui/react";
 import Image from "next/image";
 import { use, useEffect, useState } from "react";
@@ -37,9 +39,7 @@ export default function Info({ params }) {
 
   if (loading) {
     return (
-      <div className="mt-40 mr-4 ml-4 flex items-center justify-center h-full">
-        <p className="text-center text-2xl font-bold">Loading...</p>
-      </div>
+      <InfoSkeleton />
     );
   }
 
@@ -74,11 +74,11 @@ export default function Info({ params }) {
             <p className="text-lg md:text-xl md:text-left text-center lg:text-2xl md:max-w-1/2 lg:max-w-full">
               {animeInfo?.title}
             </p>
-            <p className="mt-0.5">
+            <div className="mt-0.5">
               <Chip color="warning" variant="bordered" className="ml-2 mt-0">
                 {animeInfo?.info.status}
               </Chip>
-            </p>
+            </div>
           </div>
           <p className="text-base md:text-lg md:text-left text-center lg:text-xl mt-2 text-white/60">
             {animeInfo?.info?.studio?.join(", ")}
@@ -105,6 +105,13 @@ export default function Info({ params }) {
         <p className="text-justify text-base md:text-lg mt-3 text-white/80">
           {animeInfo?.synopsis}
         </p>
+      </div>
+      <div>
+        <Divider className="my-6" />
+        <h2 className="text-lg md:text-xl font-bold text-blue-700/70 text-left lg:text-2xl">
+          Episodes
+        </h2>
+        <Episodes animeId={animeId} />
       </div>
     </div>
   );

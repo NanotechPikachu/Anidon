@@ -32,7 +32,7 @@ export default function NavBar() {
       isMenuOpen={isOpen}
       onMenuOpenChange={(open) => setIsOpen(open)}
       maxWidth="full"
-      className="bg-slate-900"
+      className="bg-slate-900 lg:h-22"
     >
       <NavbarContent justify="end" className="w-full items-center flex">
         <NavbarMenuToggle
@@ -43,14 +43,13 @@ export default function NavBar() {
           <p className="text-2xl font-bold ml-3">ANIDON</p>
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="hidden lg:flex" justify="end">
+      <NavbarContent className="hidden lg:flex h-auto" justify="end">
         <NavbarItem>
           <Form onSubmit={(e) => handleSubmit(e)}>
             <Input
               label="Search Anime"
-              isRequired
               variant="bordered"
-              className="w-80 h-10 md:h-15 mr-3"
+              className="w-80 h-15 text-base mr-3 text-white/80"
               onValueChange={(v) => setsearchItem(v)}
             />
           </Form>
@@ -61,9 +60,8 @@ export default function NavBar() {
           <Form onSubmit={(e) => handleSubmit(e)}>
             <Input
               label="Search Anime"
-              isRequired
               variant="bordered"
-              className="w-full"
+              className="w-full text-sm text-white/80"
               onValueChange={(v) => setsearchItem(v)}
             />
           </Form>
