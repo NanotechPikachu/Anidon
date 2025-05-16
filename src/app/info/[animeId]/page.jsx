@@ -20,6 +20,7 @@ export default function Info({ params }) {
       );
       if (res.status === 404) {
         setAnimeInfo({ error: "Anime Not Found" });
+        setLoading(false);
         return;
       } else {
         const data = await res?.json();

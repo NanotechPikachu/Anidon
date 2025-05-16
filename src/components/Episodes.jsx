@@ -1,7 +1,8 @@
-import { Card, CardFooter, Pagination } from "@heroui/react";
+import { Button, Card, CardFooter, Pagination } from "@heroui/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { EpisodesSkeleton } from "./Skeletons";
+import { DownloadSvg, PlaySvg } from "./Svg";
 
 export default function Episodes({ animeId }) {
   const [currentPage, setCurrentPage] = useState(0);
@@ -68,6 +69,22 @@ export default function Episodes({ animeId }) {
             />
             <CardFooter className="justify-between items-center">
               <p className="text-white/80 text-base">Episode: {ep?.episode}</p>
+              <Button
+                color="secondary"
+                size="sm"
+                variant="bordered"
+                radius="full"
+              >
+                <DownloadSvg />
+              </Button>
+              <Button
+                color="success"
+                size="sm"
+                variant="bordered"
+                radius="full"
+              >
+                <PlaySvg />
+              </Button>
             </CardFooter>
           </Card>
         ))}

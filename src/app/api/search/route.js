@@ -4,12 +4,9 @@ import { animepaheUrl, headers } from "../config";
 export async function GET(request) {
   const url = new URL(request.url);
   const anime = url?.searchParams?.get("anime");
-  const data = await fetch(
-    `${animepaheUrl}/api?m=search&q=${encodeURIComponent(anime)}`,
-    {
-      headers: headers,
-    },
-  );
+  const data = await fetch(`${animepaheUrl}/api?m=search&q=${anime}`, {
+    headers: headers,
+  });
   let dataSheet;
   if (data?.status === 200) {
     dataSheet = await data.json();
