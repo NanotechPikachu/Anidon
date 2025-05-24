@@ -1,13 +1,24 @@
-import { Button, Card, CardFooter, Pagination } from "@heroui/react";
+"use client";
+
+import {
+  Card,
+  CardFooter,
+  Modal,
+  ModalContent,
+  Pagination,
+  useDisclosure,
+} from "@heroui/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { EpisodesSkeleton } from "./Skeletons";
-import { DownloadSvg, PlaySvg } from "./Svg";
+import EpisodeLinks from "./EpisodeLinks";
+import { NextSvg } from "./Svg";
 
 export default function Episodes({ animeId }) {
   const [currentPage, setCurrentPage] = useState(0);
   const [episodeData, setEpisodeData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   useEffect(() => {
     setCurrentPage(1);
@@ -59,34 +70,32 @@ export default function Episodes({ animeId }) {
       </div>
       <div className="flex flex-wrap gap-4 justify-center mt-5">
         {episodeData?.data?.map((ep) => (
-          <Card key={ep?.id} shadow="lg">
-            <Image
-              alt={ep?.episode}
-              height={200}
-              width={200}
-              src={ep?.snapshot}
-              className="w-70 h-40"
-            />
-            <CardFooter className="justify-between items-center">
-              <p className="text-white/80 text-base">Episode: {ep?.episode}</p>
-              <Button
-                color="secondary"
-                size="sm"
-                variant="bordered"
-                radius="full"
-              >
-                <DownloadSvg />
-              </Button>
-              <Button
-                color="success"
-                size="sm"
-                variant="bordered"
-                radius="full"
-              >
-                <PlaySvg />
-              </Button>
-            </CardFooter>
-          </Card>
+          <div key={ep?.id}>
+            <Card shadow="lg" isPressable onPress={onOpen}>
+              <Image
+                alt={ep?.episode}
+                height={200}
+                width={200}
+                src={ep?.snapshot}
+                className="w-70 h-40"
+              />
+              <CardFooter className="justify-between items-center">
+                <p className="text-white/80 text-base">
+                  Episode: {ep?.episode}
+                </p>
+                <NextSvg />
+              </CardFooter>
+            </Card>
+            <Modal isOpen={isOpen} onOpenChange={onOpenChange} backdrop="blur">
+              <ModalContent>
+                {(onClose) => (
+                  <>
+                    <EpisodeLinks animeId={animeId} episodeId={ep?.session} />
+                  </>
+                )}
+              </ModalContent>
+            </Modal>
+          </div>
         ))}
       </div>
     </div>
