@@ -92,7 +92,7 @@ export default function Info({ params }) {
           </p>
           <p className="text-base md:text-lg text-left lg:text-xl mt-3 text-white/80">
             <span className="font-bold text-blue-700/70">Episodes: </span>
-            {animeInfo?.info?.episodes}
+            {animeInfo?.info?.episodes || "N/A"}
           </p>
         </div>
       </div>

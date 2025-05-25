@@ -1,8 +1,10 @@
 "use client";
 
 import {
+  Button,
   Form,
   Input,
+  Link,
   Navbar,
   NavbarBrand,
   NavbarContent,
@@ -32,7 +34,7 @@ export default function NavBar() {
       isMenuOpen={isOpen}
       onMenuOpenChange={(open) => setIsOpen(open)}
       maxWidth="full"
-      className="bg-slate-900 lg:h-22"
+      className="bg-slate-900 lg:h-22" isBordered
     >
       <NavbarContent justify="end" className="w-full items-center flex">
         <NavbarMenuToggle
@@ -42,6 +44,13 @@ export default function NavBar() {
         <NavbarBrand>
           <p className="text-2xl font-bold ml-3">ANIDON</p>
         </NavbarBrand>
+      </NavbarContent>
+      <NavbarContent justify="center" className="hidden lg:flex">
+        <NavbarItem>
+          <div className="hover:border-b-2 shadow-md hover:border-violet-500 rounded-lg p-2" onClick={() => router.push("/disclaimer")}>
+          <p className="text-violet-600 bold text-xl">Disclaimer</p>
+          </div>
+        </NavbarItem>
       </NavbarContent>
       <NavbarContent className="hidden lg:flex h-auto" justify="end">
         <NavbarItem>
@@ -56,6 +65,11 @@ export default function NavBar() {
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu className="lg:hidden">
+        <NavbarMenuItem>
+          <Button as={Link} color="secondary" className="flex justify-start text-base text-left my-2" variant="ghost" fullWidth href="/disclaimer">
+          Disclaimer
+          </Button>
+        </NavbarMenuItem>
         <NavbarMenuItem>
           <Form onSubmit={(e) => handleSubmit(e)}>
             <Input
