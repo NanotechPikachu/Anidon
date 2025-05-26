@@ -30,7 +30,7 @@ export default function Home() {
   }
 
   return (
-    <div className="mt-10 mx-4 w-full h-full">
+    <div className="mt-10 mx-4">
       <div>
         <h2 className="text-lg md:text-xl font-bold text-blue-700/70 text-center lg:text-2xl mb-8 hover:underline">
           PICKS FOR YOU
