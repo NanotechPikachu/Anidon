@@ -206,3 +206,35 @@ export function InfoSkeleton() {
     </div>
   );
 }
+
+export function FrontPageSkeleton() {
+  return (
+    <div className="mt-10 mr-4 ml-4 flex flex-wrap gap-4 lg:gap-6 justify-center">
+      <Skeleton className="rounded-lg">
+        <Card className="border-none">
+          <div className="w-50 h-90" />
+        </Card>
+      </Skeleton>
+      <Skeleton className="rounded-lg">
+        <Card className="border-none">
+          <div className="w-50 h-90" />
+        </Card>
+      </Skeleton>
+      <Skeleton className="rounded-lg">
+        <Card className="border-none">
+          <div className="w-50 h-90" />
+        </Card>
+      </Skeleton>
+      <Skeleton className="rounded-lg">
+        <Card className="border-none">
+          <div className="w-50 h-90" />
+        </Card>
+      </Skeleton>
+      <Skeleton className="rounded-lg">
+        <Card className="border-none">
+          <div className="w-50 h-90" />
+        </Card>
+      </Skeleton>
+    </div>
+  );
+}

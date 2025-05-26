@@ -34,7 +34,8 @@ export default function NavBar() {
       isMenuOpen={isOpen}
       onMenuOpenChange={(open) => setIsOpen(open)}
       maxWidth="full"
-      className="bg-slate-900 lg:h-22" isBordered
+      className="bg-slate-900 lg:h-22"
+      isBordered
     >
       <NavbarContent justify="end" className="w-full items-center flex">
         <NavbarMenuToggle
@@ -47,8 +48,11 @@ export default function NavBar() {
       </NavbarContent>
       <NavbarContent justify="center" className="hidden lg:flex">
         <NavbarItem>
-          <div className="hover:border-b-2 shadow-md hover:border-violet-500 rounded-lg p-2" onClick={() => router.push("/disclaimer")}>
-          <p className="text-violet-600 bold text-xl">Disclaimer</p>
+          <div
+            className="hover:border-b-2 shadow-md hover:border-violet-500 rounded-lg p-2"
+            onClick={() => router.push("/disclaimer")}
+          >
+            <p className="text-violet-600 bold text-xl">Disclaimer</p>
           </div>
         </NavbarItem>
       </NavbarContent>
@@ -66,8 +70,15 @@ export default function NavBar() {
       </NavbarContent>
       <NavbarMenu className="lg:hidden">
         <NavbarMenuItem>
-          <Button as={Link} color="secondary" className="flex justify-start text-base text-left my-2" variant="ghost" fullWidth href="/disclaimer">
-          Disclaimer
+          <Button
+            as={Link}
+            color="secondary"
+            className="flex justify-start text-base text-left my-2"
+            variant="ghost"
+            fullWidth
+            href="/disclaimer"
+          >
+            Disclaimer
           </Button>
         </NavbarMenuItem>
         <NavbarMenuItem>
