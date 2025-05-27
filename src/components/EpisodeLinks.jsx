@@ -106,17 +106,6 @@ export default function EpisodeLinks({ animeId, episodeId }) {
     }
   }, [page]);
 
-  if (loading) {
-    return (
-      <>
-        <ModalHeader className="flex">Download and Stream Links</ModalHeader>
-        <ModalBody>
-          <p>Loading...</p>
-        </ModalBody>
-      </>
-    );
-  }
-
   if (links?.error) {
     return (
       <>

@@ -14,6 +14,7 @@ import {
   NavbarMenuToggle,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { default as NextLink } from "next/link";
 import { useState } from "react";
 
 export default function NavBar() {
@@ -43,7 +44,9 @@ export default function NavBar() {
           className="lg:hidden"
         />
         <NavbarBrand>
-          <p className="text-2xl font-bold ml-3">ANIDON</p>
+          <NextLink href="/">
+            <p className="text-2xl font-bold ml-3">ANIDON</p>
+          </NextLink>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent justify="center" className="hidden lg:flex">

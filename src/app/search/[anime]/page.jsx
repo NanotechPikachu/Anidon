@@ -36,11 +36,7 @@ export default function SearchAnime({ params }) {
   };
 
   if (loading) {
-    return (
-      <div className="mt-16 mr-4 ml-4 p-4 grid grid-flow-row auto-rows-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
-        <SearchSkeleton />
-      </div>
-    );
+    return <SearchSkeleton />;
   }
 
   if (animeData?.error) {

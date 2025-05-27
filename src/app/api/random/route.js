@@ -29,7 +29,7 @@ export async function GET(request) {
 
   const randomAnimeID = [];
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 2; i++) {
     const randomIndex = Math.floor(Math.random() * results?.length);
     randomAnimeID.push(results[randomIndex]?.session);
   }

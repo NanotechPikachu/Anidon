@@ -1,23 +1,33 @@
 "use client";
 
 import { FrontPageSkeleton } from "@/components/Skeletons";
-import { Card, CardFooter } from "@heroui/react";
+import { Card, CardFooter, Progress } from "@heroui/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
 
   const router = useRouter();
 
   useEffect(() => {
+    let isMounted = true;
     (async () => {
-      const res = await fetch("/api/random").then((res) => res.json());
-      setData(res?.randomAnimeData || []);
-      setLoading(false);
+      setLoading(true);
+      for (let i = 0; i < 5; i++) {
+        const res = await fetch("/api/random").then((res) => res.json());
+        if (isMounted && res?.randomAnimeData) {
+          setData((prev) => [...prev, res?.randomAnimeData].flat());
+        }
+      }
+      if (isMounted) setLoading(false);
     })();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const pushToInfo = (animeId) => {
@@ -25,16 +35,27 @@ export default function Home() {
     router.push(`/info/${animeId}`);
   };
 
-  if (loading) {
+  if (loading && data?.length === 0) {
     return <FrontPageSkeleton />;
   }
 
   return (
-    <div className="mt-10 mx-4 w-full h-full">
+    <div className="mt-10 mx-4">
       <div>
-        <h2 className="text-lg md:text-xl font-bold text-blue-700/70 text-center lg:text-2xl mb-8 hover:underline">
+        <h2
+          className={`text-xl font-bold text-blue-700/70 text-center lg:text-2xl ${data?.length === 10 ? "mb-8" : "mb-2"}`}
+        >
           PICKS FOR YOU
         </h2>
+        <div className={`mb-6 ${data?.length === 10 ? "hidden" : ""}`}>
+          <Progress
+            aria-label="Loading"
+            size="sm"
+            radius="full"
+            value={data?.length}
+            maxValue={10}
+          />
+        </div>
       </div>
       <div className="flex flex-wrap gap-4 lg:gap-6 justify-center">
         {data?.map((anime) => (
