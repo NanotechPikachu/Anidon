@@ -40,10 +40,10 @@ export default function Home() {
   }
 
   return (
-    <div className="mt-10 mx-4">
+    <div className="mt-10 mx-4 mb-10">
       <div>
         <h2
-          className={`text-xl font-bold text-blue-700/70 text-center lg:text-2xl ${data?.length === 10 ? "mb-8" : "mb-2"}`}
+          className={`text-xl font-bold text-blue-500/70 text-center lg:text-2xl ${data?.length === 10 ? "mb-8" : "mb-2"}`}
         >
           PICKS FOR YOU
         </h2>

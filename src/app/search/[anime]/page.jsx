@@ -49,7 +49,7 @@ export default function SearchAnime({ params }) {
 
   return (
     <>
-      <div className="mt-16 mx-4 flex flex-wrap gap-4 lg:gap-6 justify-center">
+      <div className="mt-16 mx-4 flex flex-wrap gap-4 lg:gap-6 justify-center mb-10">
         {animeData?.map((anime) => (
           <Card
             isFooterBlurred

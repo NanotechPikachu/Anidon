@@ -43,7 +43,7 @@ export default function Info({ params }) {
   }
 
   return (
-    <div className="mt-10 mr-4 ml-4">
+    <div className="mt-10 mr-4 ml-4 mb-10">
       <div className="flex flex-col md:flex-row justify-between gap-5">
         <div className="flex justify-center md:justify-between items-center">
           <Card
@@ -83,22 +83,22 @@ export default function Info({ params }) {
             {animeInfo?.info?.studio?.join(", ")}
           </p>
           <p className="text-base md:text-lg text-left lg:text-xl mt-3 text-white/80">
-            <span className="font-bold text-blue-700/70">Genres: </span>
+            <span className="font-bold text-blue-500/70">Genres: </span>
             {animeInfo?.info?.genres?.join(", ")}
           </p>
           <p className="text-base md:text-lg text-left lg:text-xl mt-3 text-white/80">
-            <span className="font-bold text-blue-700/70">Release: </span>
+            <span className="font-bold text-blue-500/70">Release: </span>
             {animeInfo?.info?.releaseDate}
           </p>
           <p className="text-base md:text-lg text-left lg:text-xl mt-3 text-white/80">
-            <span className="font-bold text-blue-700/70">Episodes: </span>
+            <span className="font-bold text-blue-500/70">Episodes: </span>
             {animeInfo?.info?.episodes || "N/A"}
           </p>
         </div>
       </div>
       <Divider className="my-6" />
       <div className="md:ml-3">
-        <h2 className="text-lg md:text-xl font-bold text-blue-700/70 text-left lg:text-2xl">
+        <h2 className="text-lg md:text-xl font-bold text-blue-500/70 text-left lg:text-2xl">
           Synopsis
         </h2>
         <p className="text-justify text-base md:text-lg mt-3 text-white/80">
@@ -107,7 +107,7 @@ export default function Info({ params }) {
       </div>
       <div>
         <Divider className="my-6" />
-        <h2 className="text-lg md:text-xl font-bold text-blue-700/70 text-left lg:text-2xl">
+        <h2 className="md:ml-3 text-lg md:text-xl font-bold text-blue-500/70 text-left lg:text-2xl">
           Episodes
         </h2>
         <Episodes animeId={animeId} />
