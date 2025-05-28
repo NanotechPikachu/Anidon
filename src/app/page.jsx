@@ -16,7 +16,7 @@ export default function Home() {
     let isMounted = true;
     (async () => {
       setLoading(true);
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 2; i++) {
         const res = await fetch("/api/random").then((res) => res.json());
         if (isMounted && res?.randomAnimeData) {
           setData((prev) => [...prev, res?.randomAnimeData].flat());

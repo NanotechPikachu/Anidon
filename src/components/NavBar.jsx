@@ -45,7 +45,9 @@ export default function NavBar() {
         />
         <NavbarBrand>
           <NextLink href="/">
-            <p className="text-2xl font-bold ml-3">ANIDON</p>
+            <p className="text-2xl lg:text-3xl font-bold ml-3 font-['Poppins']">
+              ANIDON
+            </p>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
