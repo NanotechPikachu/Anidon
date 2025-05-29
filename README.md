@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Anidon
 
-## Getting Started
+> Anime streaming and downloading app developed by **NanotechPikachu**!
 
-First, run the development server:
+
+> [!WARNING]
+> This project is solely for educational purposes and to explore the world of scraping. Under no circumstances can this be used to make money directly or indirectly. If this is broken, I as the developer is in no way responsible.
+
+<hr />
+
+### Content Source
+
+All the content shown or displayed in the website are taken from [animepahe.ru](https://animepahe.ru) and the ownership also lays with them.
+
+### Development
+
+You are free to take inspiration or use this code in accordance with the **LICENSE**. 
+
+#### To deploy a development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### To do a production build
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### License
 
-## Learn More
+Anidon © 2025 by NanotechPikachu is licensed under Creative Commons Attribution-Non Commercial 4.0 International. 
+To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### DMCA
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+As said earlier, all the contents are owned an operated by the makers and/or owners of [AnimePahe](https://animepahe.ru). I **DO NOT** own any content here.
 
-## Deploy on Vercel
+My part here is as the developer of this website and as the owner of the code you can see.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If you want the website to be taken down, you're free to contact me (Visit the [web](https://anidon.vercel.app/disclaimer) for contact info) and I'll follow.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> [!NOTE]
+> **I do not endorse or support piracy or any other illegal activity.** The aim of this project wasn't to be in odds with law but strictly educational.
+
+### Credits
+
+- [Consumet.ts](https://github.com/consumet/consumet.ts) : This repo helped me on the making of the website on how to scrape AnimePahe.
+- To all my friends, both online and irl who helped me in testing phase by providing valuable input.
