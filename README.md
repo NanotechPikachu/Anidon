@@ -50,3 +50,13 @@ If you want the website to be taken down, you're free to contact me (Visit the [
 
 - [Consumet.ts](https://github.com/consumet/consumet.ts) : This repo helped me on the making of the website on how to scrape AnimePahe.
 - To all my friends, both online and irl who helped me in testing phase by providing valuable input.
+
+<br />
+<hr />
+
+### Changelogs
+
+```
+v2.0.0 - Prelimiary commit of completed website
+v2.1.0 - Fix: Major issue concerning incorrect episode links on Modal
+```
