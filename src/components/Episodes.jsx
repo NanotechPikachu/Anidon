@@ -72,10 +72,14 @@ export default function Episodes({ animeId }) {
       <div className="flex flex-wrap gap-4 justify-center mt-5">
         {episodeData?.data?.map((ep) => (
           <div key={ep?.id}>
-            <Card shadow="lg" isPressable onPress={() => {
-              setEpisodeId(ep?.session)
-              onOpen();
-              }}>
+            <Card
+              shadow="lg"
+              isPressable
+              onPress={() => {
+                setEpisodeId(ep?.session);
+                onOpen();
+              }}
+            >
               <Image
                 alt={ep?.episode}
                 height={200}
@@ -97,9 +101,9 @@ export default function Episodes({ animeId }) {
         <ModalContent>
           {(onClose) => (
             <>
-            {episodeId && (
-              <EpisodeLinks animeId={animeId} episodeId={episodeId} />
-            )}
+              {episodeId && (
+                <EpisodeLinks animeId={animeId} episodeId={episodeId} />
+              )}
             </>
           )}
         </ModalContent>

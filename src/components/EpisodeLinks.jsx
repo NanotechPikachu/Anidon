@@ -1,6 +1,5 @@
 import { Alert, Button, Link, ModalBody, ModalHeader } from "@heroui/react";
 import { useEffect, useState } from "react";
-import { NextSvg } from "./Svg";
 
 function DataCard({ link, type }) {
   if (type === "dwld") {
