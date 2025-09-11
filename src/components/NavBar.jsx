@@ -51,17 +51,61 @@ export default function NavBar() {
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent justify="center" className="hidden lg:flex">
+      {/*<NavbarContent justify="center" className="hidden lg:flex">
         <NavbarItem>
-          <div
-            className="hover:border-b-2 shadow-md hover:border-violet-500 rounded-lg p-2"
-            onClick={() => router.push("/disclaimer")}
-          >
-            <p className="text-violet-600 bold text-xl">Disclaimer</p>
+          <div onClick={() => router.push("/disclaimer")}>
+            <Button color="secondary" variant="ghost" isIconOnly>
+              <svg
+                dataSlot="ic</Button>on"
+                fill="none"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                className="w-5 h-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
+                />
+              </svg>
+            </Button>
           </div>
         </NavbarItem>
-      </NavbarContent>
+      </NavbarContent> */}
       <NavbarContent className="hidden lg:flex h-auto" justify="end">
+        <NavbarItem>
+          <div className="relative group">
+            <Button
+              color="secondary"
+              variant="ghost"
+              isIconOnly
+              onClick={() => router.push("/disclaimer")}
+            >
+              <svg
+                dataSlot="icon"
+                fill="none"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
+                />
+              </svg>
+            </Button>
+            <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white/80 mt-2 p-1 rounded-lg text-sm text-violet-800/90 font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+              Disclaimer
+            </div>
+          </div>
+        </NavbarItem>
         <NavbarItem>
           <Form onSubmit={(e) => handleSubmit(e)}>
             <Input
