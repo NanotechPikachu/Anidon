@@ -16,7 +16,7 @@ export default function Disclaimer() {
       <div className="text-lg text-white/50">
         This project aims to explore the world of scraping and data extraction
         from{" "}
-        <Link href="https://animepahe.ru" target="_blank" showAnchorIcon>
+        <Link href="https://animepahe.si" target="_blank" showAnchorIcon>
           AnimePahe
         </Link>{" "}
         website.
@@ -73,8 +73,8 @@ export default function Disclaimer() {
         </h2>
         As said at first, the ownership of the content shown on the website,
         except the code and structure resides with the owners or providers of{" "}
-        <Link href="https://animepahe.ru" target="_blank" showAnchorIcon>
-          animepahe.ru
+        <Link href="https://animepahe.si" target="_blank" showAnchorIcon>
+          animepahe.si
         </Link>
         . I am no way legally responsible for the contents which may/may not be
         under copyright or the likes. As such, all DMCA complaints should be
