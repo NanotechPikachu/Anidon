@@ -87,7 +87,7 @@ export default function EpisodeLinks({ animeId, episodeId }) {
           setLoading(false);
         }
       })();
-    } else {
+    } else if (page === "stream") {
       (async () => {
         const res = await fetch(
           `/api/stream?animeId=${animeId}&episodeId=${episodeId}`,

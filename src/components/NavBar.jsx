@@ -85,7 +85,7 @@ export default function NavBar() {
               onClick={() => router.push("/disclaimer")}
             >
               <svg
-                dataSlot="icon"
+                dataslot="icon"
                 fill="none"
                 strokeWidth={1.5}
                 stroke="currentColor"
